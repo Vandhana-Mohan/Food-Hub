@@ -6,18 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leave a Feedback</title>
     <link rel="stylesheet" href="./style-Feedback.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <script src="./script-Feedback.js" defer></script>
 </head>
 <body>
     <main class = "feedback">
         <form>
-            <input type="text">
-            <input type="email">
-            <input type="text">
+            <label for="name"> Enter your name:</label>
+            <input type="text" placeholder="Enter your name ..."> <br/>
+            <label for="email">Enter your email:</label>
+            <input type="email" placeholder="Enter your email ..."> <br>
+            <label>Feedback Category:</label>
+            <input type="checkbox" id="website-design" name="feedback-category" value="website-design">
+            <label for="website-design">Website Design</label>
+            
+            <input type="checkbox" id="customer-service" name="feedback-category" value="customer-service">
+            <label for="customer-service">Customer Service</label>
+            
+            <input type="checkbox" id="product-quality" name="feedback-category" value="product-quality">
+            <div id="star-rating">
+                <label> Choose the rating: </label>
+                <i class="fas fa-star" onmouseover="changeStar(this)" onmouseout="resetStar(this)" onclick="selectStar(this)"></i>
+                <i class="fas fa-star" onmouseover="changeStar(this)" onmouseout="resetStar(this)" onclick="selectStar(this)"></i>
+                <i class="fas fa-star" onmouseover="changeStar(this)" onmouseout="resetStar(this)" onclick="selectStar(this)"></i>
+                <i class="fas fa-star" onmouseover="changeStar(this)" onmouseout="resetStar(this)" onclick="selectStar(this)"></i>
+                <i class="fas fa-star" onmouseover="changeStar(this)" onmouseout="resetStar(this)" onclick="selectStar(this)"></i>
+            </div>
+            <input type="hidden" id="rating" name="rating" value="0">
+            <label for="message">Message:</label> <br>
+            <textarea id="message" name="message" rows="4" cols="50" placeholder="Enter a message..."></textarea> <br>
+              
+           
 
-
+            <button type="submit">Submit Feedback</button>
         </form>
     </main>
 </body>

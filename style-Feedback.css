@@ -1,0 +1,11 @@
+.fas.fa-star {
+    color: black;
+}
+
+.fas.fa-star:hover {
+    color: #0057e7;
+}
+
+.fas.fa-star.selected {
+    color: #ffcc00;
+}
