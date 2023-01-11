@@ -7,18 +7,20 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 html {
   font-family: "Nunito";
   font-size: 12px;
 }
 
-/* Block - page */
-.page {
+/* Block - foodHub */
+.foodHub {
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -26,12 +28,11 @@ html {
   justify-content: center;
   padding: 100px 0;
   background-image: linear-gradient(to right, #243949 0%, #517fa4 100%); 
-  
   /* background-color:rgb(26, 26, 27); */
 }
 
 /* Element - container */
-.page__container {
+.foodHub__container {
   width: 100%;
   height: 90%;
   max-width: 1200px;
@@ -40,7 +41,7 @@ html {
 }
 
 /* Element - brand */
-.page__brand {
+.foodHub__brand {
   text-align: center;
   font-size: 4rem;
   color: whitesmoke;
@@ -48,7 +49,7 @@ html {
 }
 
 /* Element - search-form */
-.page__search-form {
+.foodHub__search__form {
   width: 90%;
   max-width: 400px;
   margin: 20px auto;
@@ -56,7 +57,7 @@ html {
 }
 
 /* Element - search-input */
-.page__search-input {
+.foodHub__search__input {
   width: 90%;
   padding: 10px;
   border-radius: 4px;
@@ -68,7 +69,7 @@ html {
 }
 
 /* Element - search-icon */
-.page__search-icon {
+.foodHub__search__icon {
   width: 8%;
   font-size: 3rem;
   margin-bottom: -8px;
@@ -77,7 +78,7 @@ html {
 }
 
 /* Element - search-result */
-.page__search-result {
+.foodHub__search__result {
   margin-top: 50px;
   width: 100%;
   display: grid;
@@ -86,7 +87,7 @@ html {
 }
 
 /* Element - search-result-item */
-.page__search-result__item {
+.foodHub__search__result__item {
   width: 100%;
   border-radius: 8px;
   background-color: rgb(37, 37, 37);
@@ -95,14 +96,14 @@ html {
 }
 
 /* Element - search-result-image */
-.page__search-result__image {
+.foodHub__search__result__image {
   width: 100%;
   height: 300px;
   border-radius: 4px;
 }
 
 /* Element - search-result-content */
-.page__search-result__content {
+.foodHub__search__result__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -110,14 +111,14 @@ html {
 
 /* Element - search */
 
-.page__search-result__title {
+.foodHub__search__result__title {
   color: whitesmoke;
   margin: 20px 10px 0 0;
   font-size: 1.8rem;
   font-weight: 400;
 }
 
-.page__search-result__link {
+.foodHub__search__result__link {
   text-decoration: none;
   text-align: center;
   width: 130px;
@@ -131,7 +132,7 @@ html {
   align-self: flex-start;
 }
 
-.page__search-result__data {
+.foodHub__search__result__data {
   color: whitesmoke;
   display: block;
   margin-top: 10px;
@@ -140,15 +141,15 @@ html {
   line-height: 2rem;
 }
 
-.container.initial .brand {
+.foodHub__container.foodHub__initial .foodHub__brand{
   font-size: 7rem;
 }
 
-.container.initial form {
+.foodHub__container.foodHub__initial foodHub__search__form {
   max-width: 800px;
 }
 
-.container.initial form input {
+.foodHub__container.foodHub__initial foodHub__search__form foodHub__search__input {
   padding: 20px;
   font-size: 3rem;
 }
@@ -157,13 +158,13 @@ html {
   .search-result {
     grid-gap: 10px;
   }
-  .container.initial .brand {
+  .foodHub__container.foodHub__initial .foodHub__brand {
     font-size: 4rem;
   }
-  .container.initial form {
+  .foodHub__container.foodHub__initial foodHub__search__form {
     max-width: 500px;
   }
-  .container.initial form input {
+  .foodHub__container.foodHub__initial foodHub__search__form foodHub__search__input {
     padding: 10px;
     font-size: 2rem;
   }

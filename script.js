@@ -1,13 +1,13 @@
-const searchForm = document.querySelector("form");
-const searchResultDiv = document.querySelector(".search-result");
-const container = document.querySelector(".container");
+const searchForm = document.querySelector(".foodHub__search__form");
+const searchResultDiv = document.querySelector(".foodHub__search__result");
+const container = document.querySelector(".foodHub__container");
 let searchQuery = "";
 const APP_ID = "4486cb7f";
 const APP_key = "07ca8aa9c321a1980cc6b75d4326acb8";
-// console.log(container)
-searchForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  searchQuery = e.target.querySelector("input").value;
+
+searchForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  searchQuery = event.target.querySelector("input").value;
   fetchAPI();
 });
 
@@ -20,27 +20,20 @@ async function fetchAPI() {
 }
 
 function generateHTML(results) {
-  container.classList.remove("initial");
+  container.classList.remove("foodHub__initial");
   let generatedHTML = "";
   results.map((result) => {
-    generatedHTML += `
-      <div class="item">
-        <img src="${result.recipe.image}" alt="img">
-        <div class="flex-container">
-          <h1 class="title">${result.recipe.label}</h1>
-          <a class="view-btn" target="_blank" href="${
-            result.recipe.url
-          }">View Recipe</a>
+    generatedHTML += 
+    `<div class="foodHub__search__result__item">
+        <img class="foodHub__search__result__image" src="${result.recipe.image}" alt="img">
+        <div class="foodHub__search__result__content">
+          <h1 class="foodHub__search__result__title">${result.recipe.label}</h1>
+          <a class="foodHub__search__result__link" target="_blank" href="${result.recipe.url}">View Recipe</a>
         </div>
-        <p class="item-data">Calories: ${result.recipe.calories.toFixed(2)}</p>
-        <p class="item-data">Diet label: ${
-          result.recipe.dietLabels.length > 0
-            ? result.recipe.dietLabels
-            : "No Data Found"
-        }</p>
-        <p class="item-data">Health labels: ${result.recipe.healthLabels}</p>
-      </div>
-    `;
+        <p class="foodHub__search__result__data">Calories: ${result.recipe.calories.toFixed(2)}</p>
+        <p class="foodHub__search__result__data">Diet label: ${result.recipe.dietLabels.length > 0 ? result.recipe.dietLabels : "No Data Found"}</p>
+        <p class="foodHub__search__result__data">Health labels: ${result.recipe.healthLabels}</p>
+      </div>`;
   });
   searchResultDiv.innerHTML = generatedHTML;
 }

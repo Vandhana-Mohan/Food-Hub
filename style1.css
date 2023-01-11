@@ -1,7 +1,6 @@
 
-.page__footer {
-    background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
-    /* background-color: #333; */
+.foodHub__footer {
+    background-color: black;
     text-align: center;
     color: #fff;
     margin: 0px;
@@ -12,7 +11,7 @@
     padding-bottom: 10px;
 }
 
-.page__footer__nav__list  {
+.foodHub__footer__nav__list  {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -22,69 +21,69 @@
     align-items: flex-end;
 }
 
-.page__footer__nav{
+.foodHub__footer__nav{
     margin-top: -1.5%;
 }
 
-.page__footer__nav__item {
+.foodHub__footer__nav__item {
     margin: 0 15px;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     font-weight: bold;
 }
 
-.page__footer__nav__link{
+.foodHub__footer__nav__link{
     text-decoration: none;
     color: #fff;
     transition: 2s ease;
 }
 
-.footer ul li a:hover {
+.foodHub__footer__nav__download__icon__image__link:hover {
     font-size: 28px; 
 }
 
-.page__footer__nav__social-icons {
+.foodHub__footer__nav__social__icons {
     display: flex;
 }
 
-.page__footer__nav__social-icon--facebook {
+.foodHub__footer__nav__social__icon__facebook {
     color: #4267B2;
 }
 
-.page__footer__nav__social-icon--twitter {
+.foodHub__footer__nav__social__icon__twitter {
     color: #1DA1F2;
 }
 
-.page__footer__nav__social-icon--youtube  {
+.foodHub__footer__nav__social__icon__youtube  {
     color: #FF0000;
 }
   
-.page__footer__nav__social-icon--pinterest {
+.foodHub__footer__nav__social__icon__pinterest {
     color: #E60023;
 }
   
-.page__footer__nav__social-icon--instagram{
+.foodHub__footer__nav__social__icon__instagram{
     background: linear-gradient(to right, #405DE6, #5B51D8, #833AB4, #C13584,#E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.page__footer__nav__download-icon--google-play  {
+.foodHub__footer__nav__download__icon__google__play  {
     background: linear-gradient(to right,rgb(72, 255, 72),  rgb(255, 212, 0), rgb(59, 204, 255), rgb(255, 51, 51));
 }
-.page__footer__nav__social-icon--github {
+.foodHub__footer__nav__social__icon__github {
     color: #6e767d;
 }
 
-.page__footer__nav__social-icon--whatsapp  {
+.foodHub__footer__nav__social__icon__whatsapp  {
     color: #128C7E;
 }
 
-.social-icons a .fab.fa-apple {
+.foodHub__footer__nav__download__icon__apple {
     /* color: black; */
 }
 
-.footer .social-icons a {
+.foodHub__footer-nav__social__icon__link {
     font-size: 30px;
     padding: 0 10px;
     color: #fff;
@@ -92,36 +91,36 @@
     transition: 3s ease;
 }
   
-.footer .social-icons a:hover {
+.foodHub__footer-nav__social__icon__link:hover {
     text-decoration: none;
     font-size: 44px;
     padding: 0 10px;
     /* color: #aaa; */
 }
 
-.social-icons a img {
+.foodHub__footer-nav__social__icon__link img {
     width: 48px;
     height: 48px;
   }
   
-  .social-icons a i {
+  .foodHub__footer-nav__social__icon__link i {
     font-size: 30px;
     margin: 0 10px;
   }
   
-  .social-icons a:hover i {
+  .foodHub__footer-nav__social__icon__link:hover i {
     font-size: 38px;
   }
   
-.copyright,
-.copyright a {
+.foodHub__footer__copyright,
+.foodHub__footer__copyright__link{
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     text-decoration: none;
     color: #fff;
 }
 
-.copyright{
+.foodHub__footer__copyright{
     margin: 14px;
     padding: 8px;
 }
