@@ -1,4 +1,7 @@
+/* Importing google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap");
+
+/* Global styles */
 * {
   padding: 0;
   margin: 0;
@@ -14,35 +17,46 @@ html {
   font-size: 12px;
 }
 
-section {
+/* Block - page */
+.page {
   min-height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 100px 0;
-  background-color: rgb(26, 26, 27);
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%); 
+  
+  /* background-color:rgb(26, 26, 27); */
 }
-.container {
+
+/* Element - container */
+.page__container {
   width: 100%;
   height: 90%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
-.brand {
+
+/* Element - brand */
+.page__brand {
   text-align: center;
   font-size: 4rem;
   color: whitesmoke;
   margin-bottom: 30px;
 }
-form {
+
+/* Element - search-form */
+.page__search-form {
   width: 90%;
   max-width: 400px;
   margin: 20px auto;
   background-color: rgb(223, 223, 223);
 }
-input {
+
+/* Element - search-input */
+.page__search-input {
   width: 90%;
   padding: 10px;
   border-radius: 4px;
@@ -52,44 +66,58 @@ input {
   background-color: rgb(223, 223, 223);
   display: inline-block;
 }
-form ion-icon {
+
+/* Element - search-icon */
+.page__search-icon {
   width: 8%;
   font-size: 3rem;
   margin-bottom: -8px;
   color: rgb(75, 75, 75);
   display: inline-block;
 }
-.search-result {
+
+/* Element - search-result */
+.page__search-result {
   margin-top: 50px;
   width: 100%;
   display: grid;
   grid-gap: 25px;
   grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
 }
-.item {
+
+/* Element - search-result-item */
+.page__search-result__item {
   width: 100%;
   border-radius: 8px;
   background-color: rgb(37, 37, 37);
   padding: 15px;
   overflow: hidden;
 }
-.item img {
+
+/* Element - search-result-image */
+.page__search-result__image {
   width: 100%;
   height: 300px;
   border-radius: 4px;
 }
-.flex-container {
+
+/* Element - search-result-content */
+.page__search-result__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.search-result .title {
+
+/* Element - search */
+
+.page__search-result__title {
   color: whitesmoke;
   margin: 20px 10px 0 0;
   font-size: 1.8rem;
   font-weight: 400;
 }
-.view-btn {
+
+.page__search-result__link {
   text-decoration: none;
   text-align: center;
   width: 130px;
@@ -102,7 +130,8 @@ form ion-icon {
   border-radius: 4px;
   align-self: flex-start;
 }
-.item-data {
+
+.page__search-result__data {
   color: whitesmoke;
   display: block;
   margin-top: 10px;
@@ -110,12 +139,15 @@ form ion-icon {
   letter-spacing: 0.05rem;
   line-height: 2rem;
 }
+
 .container.initial .brand {
   font-size: 7rem;
 }
+
 .container.initial form {
   max-width: 800px;
 }
+
 .container.initial form input {
   padding: 20px;
   font-size: 3rem;
@@ -135,162 +167,4 @@ form ion-icon {
     padding: 10px;
     font-size: 2rem;
   }
-}
-
-/* ********************* */
-/* This Code is for only the floating card in right bottom corner */
-/* ********************** */
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
-* {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-a {
-  padding: 0;
-  margin: 0;
-  color: var(--color-4);
-  text-decoration: none;
-}
-#webCifar-sidebox {
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
-  overflow-x: clip;
-  width: 300px;
-}
-#webCifar-sidebox p {
-  padding: 0;
-  margin: 0;
-}
-#webCifar {
-  --color-1: #17bcb4;
-  --color-2: #24252a;
-  --color-3: #244044;
-  --color-4: #f3f8f7;
-  background: var(--color-2);
-  display: inline-block;
-  color: var(--color-4);
-  padding: 10px 17px;
-  border-radius: 6px;
-  font-family: "Roboto Mono", monospace;
-  text-align: center;
-  position: absolute;
-  right: 5px;
-  bottom: 5px;
-  -webkit-transform: translateX(calc(100% + 5px));
-  transform: translateX(calc(100% + 5px));
-  -webkit-transition: 0.5s ease-out transform;
-  transition: 0.5s ease-out transform;
-  z-index: 4;
-}
-
-#webCifar.active {
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-}
-
-#webCifar .logo {
-  font-size: 25px;
-}
-
-#webCifar .author {
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-#webCifar .author span {
-  background-color: var(--color-3);
-  padding: 3px;
-  border-radius: 4px;
-}
-
-#webCifar .items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-#webCifar .item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 5px;
-  border-radius: 4px;
-  text-align: left;
-}
-
-#webCifar .item:hover {
-  background-color: var(--color-3);
-}
-
-#webCifar svg {
-  max-width: 20px;
-}
-
-#webCifar .close {
-  position: absolute;
-  display: inline-block;
-  height: 30px;
-  width: 30px;
-  right: 5px;
-  top: 5px;
-  padding: 5px;
-  background-color: var(--color-3);
-  border-radius: 50%;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-#webCifar-icon {
-  --color-2: #24252a;
-  --color-3: #244044;
-  font-family: "Roboto Mono", monospace;
-  text-align: left;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  background-color: var(--color-2);
-  color: white;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 5px;
-  border-radius: 4px;
-  gap: 5px;
-  margin: 5px;
-  cursor: pointer;
-  z-index: 1;
-  position: relative;
-  right: -27%;
-}
-
-#webCifar-icon svg {
-  max-width: 20px;
 }
