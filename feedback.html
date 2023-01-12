@@ -14,54 +14,62 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class = "feedback__header">
-        <h1 class="feedback__heading">Feedback Form</h1>
-        <blockquote class = "feedback__quote">People who love to eat are always the best people. - <cite class = "feedback__cite">Julia Child</cite></blockquote>
+    <header class = "">
+        <h1 class="">Feedback Form</h1>
+        <blockquote class = "">People who love to eat are always the best people. <cite class = "">- Julia Child</cite></blockquote>
     </header>
-    <main class = "feedback">
-        <form class="feedback__form">
-            <label class = "feedback__label form-label" for="name"> Full Name:</label>
-            <input class="feedback__input form-control" type="text" placeholder="Enter Your Full Name ..." id="name" name="name" required>
+
+    <main class = "">
+        <form class="row g-3">
+            <div class="col">
+                <label class = "form-label" for="name"> Full Name:</label>
+                <input class="form-control" type="text" placeholder="Enter Your Full Name ..." id="name" name="name" required>
+            </div>
+            <div class="col">
+                <label class="form-label" for="email">Email:</label>
+                <input class="form-control" type="email" placeholder="johnDoe@example.com" id="email" name="email">
+            </div>
+            <div class="col-12">
+                <label class="form-label">Did you find what you were looking for?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="find-yes" name="find" value="Yes">
+                    <label class="form-label" for="find-yes">Yes</label><br>
+                    <input class="form-check-input" type="checkbox" id="find-no" name="find" value="No">
+                    <label class="form-label" for="find-no">No</label><br>
+                </div>
+                <div class="col-12">
+                    <label class="form-label" for="message">What information were you seeking?</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" cols="50"></textarea>
+                </div>
+            </div>
             
-            <label class="feedback__label form-label" for="email">Email:</label>
-            <input class="feedback__input form-control" type="email" placeholder="johnDoe@example.com" id="email" name="email"> <br>
-
-            <div class="feedback__checkbox mb-3">
-                <label class="feedback__label form-label">Did you find what you were looking for?</label><br>
-                <input class="feedback__checkbox form-control" type="checkbox" id="find-yes" name="find" value="Yes">
-                <label class="feedback__label form-label" for="find-yes">Yes</label><br>
-                <input class="feedback__checkbox form-control" type="checkbox" id="find-no" name="find" value="No">
-                <label class="feedback__label form-label" for="find-no">No</label><br>
-                <label class="feedback__label form-label" for="message">What information were you seeking?</label><br>
-                <textarea class="feedback__textarea form-control" id="message" name="message" rows="4" cols="50"></textarea><br>
-            </div>
-
-            <div class="feedback__checkbox mb-3">
-                <label class="feedback__label form-label">Website Navigation</label><br>
-                <input class="feedback__checkbox form-control" type="checkbox" id="design__very__easy" name="design" value="Very Easy">
-                <label class="feedback__label form-label" for="design__very__easy">Very Easy</label><br>
-                <input class="feedback__checkbox form-control" type="checkbox" id="design__easy" name="design" value="Easy">
-                <label class="feedback__label form-label" for="design__easy">Easy</label><br>
-                <input class="feedback__checkbox form-control" type="checkbox" id="design__average" name="design" value="Average">
-                <label class="feedback__label form-label" for="design__average">Average</label><br>
-                <input class="feedback__checkbox form-control" type="checkbox" id="design__difficult" name="design" value="Difficult">
-                <label class="feedback__label form-label" for="design__difficult">Difficult</label><br>
-                <input class="feedback__checkbox form-control" type="checkbox" id="design__very__difficult" name="design" value="Very Difficult">
-                <label class="feedback__label form-label" for="design__very__difficult">Very Difficult</label><br>
-            </div>
-
-            <div class="feedback__checkbox mb-3">
-                <label class="feedback__label form-label">Will you visit the website again?</label><br>
-                <input class="feedback__checkbox form-control" type="checkbox" id="extremely__likely" name="extremely__likely" value="Extremely Likely">
-                <label class="feedback__label form-label" for="extremely__likely">Extremely Likely</label><br>
-                <input class="feedback__checkbox form-control" type="checkbox" id="very__likely" name="very__likely" value="Very Likely">
-                <label class="feedback__label form-label" for="very__Likely">Very Likely</label><br>
-                <input class="feedback__checkbox form-control" type="checkbox" id="moderately__likely" name="moderately__likely" value="Moderately Likely">
-                <label class="feedback__label form-label" for="moderately__likely">Moderately Likely</label><br>
-                <input class="feedback__checkbox form-control" type="checkbox" id="slightly__likely" name="slightly__likely" value="Slightly Likely">
-                <label class="feedback__label form-label" for="slightly__likely">Slightly Likely</label><br>
-                <input class="feedback__checkbox form-control" type="checkbox" id="unlikely__return" name="unlikely__return" value="Unlikely to Return">
-                <label class="feedback__label form-label" for="unlikely__return">Unlikely to Return</label><br>
+            <div class="col-12">
+                <label class="form-label">Website Navigation</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="design__very__easy" name="design" value="Very Easy">
+                    <label class="form-label" for="design__very__easy">Very Easy</label><br>
+                    <input class="form-check-input" type="checkbox" id="design__easy" name="design" value="Easy">
+                    <label class="form-label" for="design__easy">Easy</label><br>
+                    <input class="form-check-input" type="checkbox" id="design__average" name="design" value="Average">
+                    <label class="form-label" for="design__average">Average</label><br>
+                    <input class="form-check-input" type="checkbox" id="design__difficult" name="design" value="Difficult">
+                    <label class="form-label" for="design__difficult">Difficult</label><br>
+                    <input class="form-check-input" type="checkbox" id="design__very__difficult" name="design" value="Very Difficult">
+                    <label class="form-label" for="design__very__difficult">Very Difficult</label><br>
+                </div>
+                <label class="form-label">Will you visit the website again?</label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="extremely__likely" name="extremely__likely" value="Extremely Likely">
+                    <label class="form-label" for="extremely__likely">Extremely Likely</label><br>
+                    <input class="form-check-input" type="checkbox" id="very__likely" name="very__likely" value="Very Likely">
+                    <label class="form-label" for="very__Likely">Very Likely</label><br>
+                    <input class="form-check-input" type="checkbox" id="moderately__likely" name="moderately__likely" value="Moderately Likely">
+                    <label class="form-label" for="moderately__likely">Moderately Likely</label><br>
+                    <input class="form-check-input" type="checkbox" id="slightly__likely" name="slightly__likely" value="Slightly Likely">
+                    <label class="form-label" for="slightly__likely">Slightly Likely</label><br>
+                    <input class="form-check-input" type="checkbox" id="unlikely__return" name="unlikely__return" value="Unlikely to Return">
+                    <label class="form-label" for="unlikely__return">Unlikely to Return</label><br>
+                </div>
             </div>
             
             <div id="star-rating mb-3">
@@ -74,11 +82,13 @@
             </div>
 
             <input type="hidden" id="rating" name="rating" value="0">
-            <label class="feedback__label form-label" for="message">Please provide any additional comments or suggestions. <em> optional </em></label><br>
-            <textarea class="feedback__textarea form-control" id="message" name="message" rows="4" cols="50" placeholder="Additional Comments"></textarea><br>
+            <label class="form-label" for="message">Please provide any additional comments or suggestions. <em> optional </em></label><br>
+            <textarea class="form-control" id="message" name="message" rows="4" cols="50" placeholder="Additional Comments"></textarea><br>
               
-            <h3 class = "feedback__title">We appreciate your feedback!</h3>
-            <button class= "feedback__submit" type="submit">Submit Feedback</button>
+            <h3 class = "">We appreciate your feedback!</h3>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Submit Feedback</button>
+            </div>            
         </form>
     </main>
     <footer class="foodHub__footer" role="contentinfo">
