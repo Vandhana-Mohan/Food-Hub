@@ -2,8 +2,8 @@ const searchForm = document.querySelector(".foodHub__search__form");
 const searchResultDiv = document.querySelector(".foodHub__search__result");
 const container = document.querySelector(".foodHub__container");
 let searchQuery = "";
-const APP_ID = "4486cb7f";
-const APP_key = "07ca8aa9c321a1980cc6b75d4326acb8";
+//const APP_ID = "4486cb7f";
+//const APP_key = "07ca8aa9c321a1980cc6b75d4326acb8";
 
 searchForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -12,7 +12,7 @@ searchForm.addEventListener("submit", (event) => {
 });
 
 async function fetchAPI() {
-  const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_key}&from=0&to=20`;
+  const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_key}&from=0&to=50`;
   const response = await fetch(baseURL);
   const data = await response.json();
   generateHTML(data.hits);

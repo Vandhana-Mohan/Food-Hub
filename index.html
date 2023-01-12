@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./style1.css">
+    <link rel="stylesheet" href="./style-Footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <title>Recipe Hunt</title>
@@ -16,7 +16,7 @@
         <div class="foodHub__container foodHub__initial">
           <h1 class="foodHub__brand">Recipe App</h1>
           <form class="foodHub__search__form">
-            <input class="foodHub__search__input" type="text" placeholder="Search Your Recipe...">
+            <input class="foodHub__search__input" type="text" pattern= "^[A-Za-z0-9]+$" title="Only letters are allowed" required placeholder="Search Your Recipe...">
             <ion-icon class="foodHub__search__icon" name="search"></ion-icon>
           </form>
           <div class="foodHub__search__result">
@@ -38,7 +38,7 @@
                 <li class="foodHub__footer__nav__item"><a class="foodHub__footer__nav__link" href="#">Home</a></li>
                 <li class="foodHub__footer__nav__item"><a class="foodHub__footer__nav__link" href="#">About</a></li>
                 <li class="foodHub__footer__nav__item"><a class="foodHub__footer__nav__link" href="#">Leave a Feedback</a></li>
-                <li class="foodHub__footer__nav__item"> Follow us
+                <li class="foodHub__footer__nav__item"> Connect With Us
                     <div class="foodHub__footer__social__icons">
                         <a class="foodHub__footer__nav__link foodHub__footer__facebook" href="https://facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square" alt="Facebook"></i></a>
                         <a class="foodHub__footer__nav__link foodHub__footer__instagram" href="https://instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram" alt="Instagram"></i></a>
@@ -49,7 +49,7 @@
                         <a class="foodHub__footer__nav__link foodHub__footer__github" href="https://github.com/Vandhana-Mohan" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" alt="GitHub"></i></a>
                     </div>
                 </li>
-                <li class="foodHub__footer__nav__item" style = "margin-bottom: -5px;"> Download us on:
+                <li class="foodHub__footer__nav__item" style = "margin-bottom: -5px;"> Download us:
                     <div class="foodHub__footer__social__icons">
                         <a class="foodHub__footer__nav__link foodHub__footer__apple" href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer"> <i class="fab fa-apple" alt="Download on Apple store"></i> </a>
                         <a class="foodHub__footer__nav__link foodHub__footer__google__play" href="https://play.google.com/store/games?hl=en_US&gl=US&pli=1" target="_blank" rel="noopener noreferrer"> <img class = "google" src="./assets/icons8-google-play-48.png" alt="Get it on Google Play"> </a>
