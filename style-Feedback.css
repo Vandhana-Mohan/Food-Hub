@@ -2,13 +2,13 @@
 
 html {
     font-family: "Nunito";
-    font-size: 17px;
+    font-size: 15px;
 }
 
 
 .fas.fa-star {
     color: black;
-    font-size: xxx-large;
+    font-size: xx-large;
 }
 
 .fas.fa-star:hover {
@@ -21,17 +21,18 @@ html {
 
 .form-control {
     width: 80%;  /* !important; --- use !important to give css priority over bootstrap or place style.css below bootstrap link */
-    border: 2px solid rgb(115, 115, 237);
+    border: 2px solid black;
     border-radius: 2%;
 } 
 
 body{
     border:2px solid black;
     margin: 5px;
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
 }
 
 .mt-5 {
-    margin-top: 1rem !important;
+    margin-top: 0.2rem !important;
 }
 
 .mt-3 {
@@ -45,7 +46,7 @@ body{
 }
 
 .align__label{
-    margin-top: 1rem;
+    margin-top: 0.4rem;
     text-align: center;
     font-weight:bold;
 }
@@ -55,6 +56,7 @@ hr{
     margin-right: -12.5px;
     border: 1px solid black;
     opacity: 1.25;
+    margin: 0.3rem;
 }
 
 .form-check-input{
@@ -62,9 +64,9 @@ hr{
 }
 
 .btn{
-    margin-right: 1.2rem !important;
+    margin-right: 1.5rem !important;
 }
 
 .style__star{
-    margin-left: 24.2rem;
+    margin-left: 30.2rem;
 }
