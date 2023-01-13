@@ -5,8 +5,10 @@ html {
     font-size: 17px;
 }
 
+
 .fas.fa-star {
     color: black;
+    font-size: xxx-large;
 }
 
 .fas.fa-star:hover {
@@ -14,7 +16,7 @@ html {
 }
 
 .fas.fa-star.selected {
-    color: #ffcc00;
+    color: red;
 }
 
 .form-control {
@@ -25,7 +27,7 @@ html {
 
 body{
     border:2px solid black;
-    margin: 15px;
+    margin: 5px;
 }
 
 .mt-5 {
@@ -57,4 +59,12 @@ hr{
 
 .form-check-input{
     border: 1px solid black !important;
+}
+
+.btn{
+    margin-right: 1.2rem !important;
+}
+
+.style__star{
+    margin-left: 24.2rem;
 }
