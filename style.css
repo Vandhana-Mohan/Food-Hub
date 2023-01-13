@@ -26,18 +26,18 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 100px 0;
+  padding: 48px 0;
   background-image: linear-gradient(to right, #243949 0%, #517fa4 100%); 
   /* background-color:rgb(26, 26, 27); */
 }
 
 /* Element - container */
 .foodHub__container {
-  width: 100%;
+  width: 35%;
   height: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0px;
 }
 
 /* Element - brand */
