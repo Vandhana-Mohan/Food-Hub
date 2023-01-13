@@ -69,12 +69,18 @@ html {
 }
 
 /* Element - search-icon */
-.foodHub__search__icon {
+.fas.fa-search{
   width: 8%;
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: -8px;
-  color: rgb(75, 75, 75);
+  background-color: rgb(223, 223, 223);
+  color: black;
   display: inline-block;
+}
+
+.fas.fa-search:hover {
+  color: red;
+  transition: color 0.3s ease-out;
 }
 
 /* Element - search-result */
