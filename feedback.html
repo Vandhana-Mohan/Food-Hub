@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leave a Feedback</title>
-    <link rel="stylesheet" href="./style-Feedback.css">
-    <link rel="stylesheet" href="./style-Footer.css">
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style-Feedback.css">
+    <link rel="stylesheet" href="./style-Footer.css">
     <script src="./script-Feedback.js" defer></script>
 </head>
 <body>
@@ -21,74 +21,83 @@
                     <em style="font-style: italic;">People who love to eat are always the best people. <cite>- Julia Child</cite> </em>
                 </blockquote>
             </div>
-        </div>
+        </div> <hr>
         <form>
             <div class="row mt-5">
                 <div class="col-12 col-md-6 mb-3">
-                    <label for="name">Full Name</label>
+                    <label for="name" class = "align__label">Full Name</label>
                     <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Full Name" required>
                 </div>
                 <div class="col-12 col-md-6 mb-3">
-                    <label for="email">Email</label>
+                    <label for="email" class = "align__label">Email</label>
                     <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email">
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 col-md-4 mb-3">
-                    <label>Did you find what you were looking for?</label>
+                    <label class = "align__label">Did you find what you were looking for?</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="find" id="find-yes" value="Yes">
-                        <label class="form-check-label" for="find-yes">Yes</label>
+                        <input class="form-check-input align__label" type="radio" name="find" id="find-yes" value="Yes">
+                        <label class="form-check-label align__label" for="find-yes">Yes</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="find" id="find-no" value="No">
-                        <label class="form-check-label" for="find-no">No</label>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4 mb-3">
-                    <label>Website Navigation</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="design" id="design-very-easy" value="Very Easy">
-                        <label class="form-check-label" for="design-very-easy">Very Easy</label>
+                        <input class="form-check-input align__label" type="radio" name="find" id="find-no" value="No">
+                        <label class="form-check-label align__label" for="find-no">No</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="design" id="design-easy" value="Easy">
-                        <label class="form-check-label" for="design-easy">Easy</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="design" id="design-average" value="Average">
-                        <label class="form-check-label" for="design-average">Average</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="design" id="design-difficult" value="Difficult">
-                        <label class="form-check-label" for="design-difficult">Difficult</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="design" id="design-very-difficult" value="Very Difficult">
-                        <label class="form-check-label" for="design-very-difficult">Very Difficult</label>
+                        <input class="form-check-input align__label" type="radio" name="visit" id="visit-maybe" value="Maybe">
+                        <label class="form-check-label align__label" for="visit-maybe">Maybe</label>
                     </div>
                 </div>
                 <div class="col-12 col-md-4 mb-3">
-                        <label>Will you visit the website again?</label>
+                    <label class = "align__label">Website Navigation</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="visit" id="visit-yes" value="Yes">
-                        <label class="form-check-label" for="visit-yes">Yes</label>
+                        <input class="form-check-input align__label" type="radio" name="design" id="design-very-easy" value="Very Easy">
+                        <label class="form-check-label align__label" for="design-very-easy">Very Easy</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="visit" id="visit-no" value="No">
-                        <label class="form-check-label" for="visit-no">No</label>
+                        <input class="form-check-input align__label" type="radio" name="design" id="design-easy" value="Easy">
+                        <label class="form-check-label align__label" for="design-easy">Easy</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="visit" id="visit-maybe" value="Maybe">
-                        <label class="form-check-label" for="visit-maybe">Maybe</label>
+                        <input class="form-check-input align__label" type="radio" name="design" id="design-average" value="Average">
+                        <label class="form-check-label align__label" for="design-average">Average</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input align__label" type="radio" name="design" id="design-difficult" value="Difficult">
+                        <label class="form-check-label align__label" for="design-difficult">Difficult</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input align__label" type="radio" name="design" id="design-very-difficult" value="Very Difficult">
+                        <label class="form-check-label align__label" for="design-very-difficult">Very Difficult</label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-3">
+                        <label class = "align__label">Will you visit the website again?</label>
+                    <div class="form-check">
+                        <input class="form-check-input align__label" type="radio" name="visit" id="visit-yes" value="Yes">
+                        <label class="form-check-label align__label" for="visit-yes">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input align__label" type="radio" name="visit" id="visit-no" value="No">
+                        <label class="form-check-label align__label" for="visit-no">No</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input align__label" type="radio" name="visit" id="visit-maybe" value="Maybe">
+                        <label class="form-check-label align__label" for="visit-maybe">Maybe</label>
                     </div>
                 </div>
         </div>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea">Please leave Any Comments / Suggestions </label>
+                </div>
                 <div class="row">
                     <div class="col-12 text-center mt-4">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary align__label">Submit</button>
+                        <button type="reset" class="btn btn-primary align__label">Reset</button>
                     </div>
-                </div>
+                </div> <br>
         </form>
                         
     </div>

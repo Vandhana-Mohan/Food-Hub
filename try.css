@@ -1,0 +1,49 @@
+.diandre{
+    display: flex;
+    grid-template-columns: span 2;
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid red;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: center;
+    align-items: stretch;
+}
+
+#workout_container{
+    width:202%;
+    height: 100%;
+}
+
+#workout_container img{
+    width: 100%;
+    height:100%;
+}
+
+#workout_container1 img{
+    width: 100%;
+    height:100%;
+}
+#motivation_container{
+    display: flex;
+    
+}
+#motivation{
+    font-size: 300%;
+}
+#workout_container1{
+    width:20%;
+    height: 20%;
+}
+.story__container {
+    width: 30%;
+    height: 30%;
+    margin: 10px;
+    padding: 10px;
+    /* align-items: center; */
+    text-align: justify;
+    border: 2px solid green;
+    display: grid;
+    grid-template-columns: span 2;
+}
