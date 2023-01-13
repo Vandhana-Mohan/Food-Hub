@@ -76,15 +76,15 @@ html {
   margin-bottom: -8px;
   color: black;
   display: inline-block;
-  background-color: white;
   border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  padding: 10px;
+  padding: 7px;
 }
 
 .fas.fa-search:hover {
   color: red;
   transition: color 0.3s ease-out;
+  background-color: #f1f1f1;
+  cursor:pointer;
 }
 
 /* Element - search-result */
