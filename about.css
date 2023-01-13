@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap");
+
+html{
+    font-family: CopperPot;
+    font-size: 15px;
+}
+
+body{
+    border:2px solid black;
+    margin: 5px;
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+}
