@@ -64,8 +64,9 @@ html {
   border: none;
   outline: none;
   font-size: 2rem;
-  background-color: rgb(223, 223, 223);
   display: inline-block;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 /* Element - search-icon */
@@ -73,9 +74,12 @@ html {
   width: 8%;
   font-size: 2rem;
   margin-bottom: -8px;
-  background-color: rgb(223, 223, 223);
   color: black;
   display: inline-block;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  padding: 10px;
 }
 
 .fas.fa-search:hover {
