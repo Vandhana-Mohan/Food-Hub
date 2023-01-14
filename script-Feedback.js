@@ -83,28 +83,30 @@ document.addEventListener("click", (event) => {
     // Clear the existing reviews
     container.querySelectorAll(".review-item").forEach((review) => review.remove());
     
-    // Create a table element for the reviews
-    const table = document.createElement("table");
-    table.classList.add("feedback-table");
+    // // Create a table element for the reviews
+    // const table = document.createElement("table");
+    // table.classList.add("feedback-table");
     
-    // Create the table head
-    const thead = document.createElement("thead");
-    const headRow = document.createElement("tr");
-    headRow.innerHTML = `<th>Name</th> <th>Email</th> <th>Found what they were looking for</th> <th>Visit Reason</th> <th>Star Rating</th> <th>Additional Comments</th> <th>Actions</th>`;
-    thead.appendChild(headRow);
-    table.appendChild(thead);
+    // // Create the table head
+    // const thead = document.createElement("thead");
+    // const headRow = document.createElement("tr");
+    // headRow.innerHTML = `<th>Name</th> <th>Email</th> <th>Found what they were looking for</th> <th>Visit Reason</th> <th>Star Rating</th> <th>Additional Comments</th> <th>Actions</th>`;
+    // thead.appendChild(headRow);
+    // table.appendChild(thead);
     
     // Create the table body
-    const tbody = document.createElement("tbody");
+    const table = document.querySelector(".feedback-table")
+    const tbody = document.querySelector(".review-items");
+
     reviewData.forEach((review, index) => {
       const row = document.createElement("tr");
-      row.innerHTML = `<td>${review.name}</td>
-                      <td>${review.email}</td>
-                      <td>${review.find}</td>
-                      <td>${review.visit}</td>
-                      <td>${review["star-rating"]}</td>
-                      <td>${review.comments}</td>
-                      <td><button class="btn btn-danger btn-delete" data-index="${index}">Delete</button></td>`;
+      row.innerHTML = `<td class="table-info">${review.name}</td>
+                      <td class="table-info">${review.email}</td>
+                      <td class="table-info">${review.design}</td>
+                      <td class="table-info">${review.visit}</td>
+                      <td class="table-info">${review["star-rating"]}</td>
+                      <td class="table-info">${review.comments}</td>
+                      <td class="table-info"><button class="btn btn-danger btn-delete" data-index="${index}">Delete</button></td>`;
       tbody.appendChild(row);
     });
     table.appendChild(tbody);

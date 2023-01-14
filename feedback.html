@@ -98,41 +98,41 @@
             <i class="fas fa-star" onmouseover="changeStar(this)" onmouseout="resetStar(this)" onclick="selectStar(this)"></i>
         </div>
 
-            <input type="hidden" id="rating" name="rating" value="0">
-            <div class="">
-                <!-- <label class="form-check-label fs-5  align__label style__star" for="message">Please provide any additional comments/suggestions. </label> <em> optional </em> -->
-                <textarea class="form-control w-50  style__star" id="message" name="comments" rows="4" cols="50" placeholder="Please provide any additional comments/suggestions."></textarea>
+        <input type="hidden" id="rating" name="rating" value="0">
+        <div class="">
+            <!-- <label class="form-check-label fs-5  align__label style__star" for="message">Please provide any additional comments/suggestions. </label> <em> optional </em> -->
+            <textarea class="form-control w-50  style__comment" id="message" name="comments" rows="4" cols="50" placeholder="Please provide any additional comments/suggestions."></textarea>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center mt-4">
+                <button type="submit" id = "review" class="btn btn-primary align__label p-2 mt-1">Submit</button>
+                <button type="reset" class="btn btn-primary align__label p-2 mt-1">Reset</button>
             </div>
-                <div class="row">
-                    <div class="col-12 text-center mt-4">
-                        <button type="submit" id = "review" class="btn btn-primary align__label p-2 mt-1">Submit</button>
-                        <button type="reset" class="btn btn-primary align__label p-2 mt-1">Reset</button>
-                    </div>
-                </div>
+        </div>
         </form>
         <div class="feedback-message"> </div>
-    </div>
     
     <!-- Add a heading for the review section -->
     <h1>Other Reviews</h1>
 
     <!-- Create a table to display the review data -->
-    <table class="feedback-table">
-    <thead>
-        <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Found what they were looking for</th>
-        <th>Visit Reason</th>
-        <th>Star Rating</th>
-        <th>Additional Comments</th>
-        <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody class="review-items">
-        <!-- This will be populated with the review data -->
-    </tbody>
+    <table class="table-success table-striped table feedback-table">
+        <thead>
+            <tr class="table-danger">
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Website Navigation</th>
+                <th scope="col">Visit Again</th>
+                <th scope="col">Star Rating</th>
+                <th scope="col">Additional Comments</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody class="review-items">
+            <!-- This will be populated with the review data -->
+        </tbody>
     </table>
+</div>
     <footer class="foodHub__footer" role="contentinfo">
         <nav class="foodHub__footer__nav">
             <ul class="foodHub__footer__nav__list">

@@ -71,6 +71,9 @@ hr{
     margin-left: 30.2rem;
 }
 
+.style__comment{
+    margin-left: 22.2rem;
+}
 /* Add some styles for the table */
 .feedback-table {
     width: 100%;
@@ -79,7 +82,7 @@ hr{
   
   /* Add styles for the table headers */
   .feedback-table th {
-    background-color: #f2f2f2;
+    /* background-color: #f2f2f2; */
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
@@ -91,6 +94,8 @@ hr{
     padding: 8px;
   }
   
+
+
   /* Add styles for the delete button */
   .btn-delete {
     background-color: #f44336;
