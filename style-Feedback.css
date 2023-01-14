@@ -70,3 +70,34 @@ hr{
 .style__star{
     margin-left: 30.2rem;
 }
+
+/* Add some styles for the table */
+.feedback-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Add styles for the table headers */
+  .feedback-table th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* Add styles for the table cells */
+  .feedback-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  /* Add styles for the delete button */
+  .btn-delete {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
