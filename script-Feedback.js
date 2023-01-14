@@ -33,7 +33,9 @@ function changeStar(star) {
   
 
 const form = document.querySelector(".feedback");
-const submitButton = form.querySelector("input[type='submit']");
+// const submitButton = form.querySelector("input[type='submit']");
+const submitButton = form.querySelector("#review");
+const feedbackMessage = document.querySelector(".feedback-message");
 
 submitButton.addEventListener("click", (event) => {
   event.preventDefault(); // prevent the form from submitting
@@ -54,12 +56,23 @@ submitButton.addEventListener("click", (event) => {
   formData["star-rating"] = selectedStars;
   formElements.forEach((formElement) => {
     if (formElement.type === "radio" && formElement.checked === false) {
-      return;
+    return;
     }
     formData[formElement.name] = formElement.value;
-  });
-  
-  Object.keys(formData).forEach((key) => { // Store the form data in local storage
+    });
+    
+    Object.keys(formData).forEach((key) => { // Store the form data in local storage
     localStorage.setItem(key, formData[key]);
-  });
-});
+    });
+
+    feedbackMessage.innerHTML = `Thank you for your feedback!`;
+const reviewItem = document.createElement("div");
+reviewItem.classList.add("review-item");
+reviewItem.innerHTML = `<p>Name: ${formData["name"]}</p> 
+                        <p>Email: ${formData["email"]}</p> 
+                        <p>Found what they were looking for: ${formData["find"]}</p> 
+                        <p>Visit Reason: ${formData["visit"]}</p> 
+                        <p>Star Rating: ${formData["star-rating"]}</p> 
+                        <p>Additional Comments: ${formData["comments"]}</p>`;
+document.querySelector(".container-fluid").appendChild(reviewItem);
+  })
