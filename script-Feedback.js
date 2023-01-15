@@ -4,6 +4,7 @@ const submitButton = form.querySelector("#review");
 const feedbackMessage = document.querySelector(".feedback-message");
 const reviewsContainer = document.querySelector(".review-items");
 let reviewsData = JSON.parse(localStorage.getItem("reviewsData")) || [];
+let keys = JSON.parse(localStorage.getItem("keys")) || [];
 // selects the div with the id "star-rating" and all the "i" tags within it, and stores them in a variable called "stars".
 const starRating = document.querySelector("#star");
 const stars = starRating.querySelectorAll("i");
@@ -72,10 +73,10 @@ form.addEventListener("submit", function(event) {
     return;
   }
   if(selectedStars === 0){
-    feedbackMessage.textContent = "Please select a star rating - it's a required field.";
+    feedbackMessage.textContent = "Please select a star ⭐️ rating - it's a required field.";
     return;
   }
-  // Store the form data in local storage
+ // Store the form data in local storage
   reviewsData.push(formData);
   localStorage.setItem("reviewsData", JSON.stringify(reviewsData));
   // Display the form data in a table
@@ -83,7 +84,7 @@ form.addEventListener("submit", function(event) {
   tr.innerHTML = 
   `<td>${formData.name}</td>
   <td>${formData.email}</td>
-  <td>${formData.starRating}</td>
+  <td>${formData.starRating} ⭐️ </td>
   <td>${formData.comments}</td>
   <td><button class="delete-btn">Delete</button></td>`;
   reviewsContainer.appendChild(tr);

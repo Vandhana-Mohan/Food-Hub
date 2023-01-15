@@ -51,6 +51,8 @@ html {
   color: whitesmoke;
   margin-bottom: 30px;
   font-family: cursive;
+  letter-spacing: 1px;
+  line-height: 1px;
 }
 
 /* Element - search-form */
