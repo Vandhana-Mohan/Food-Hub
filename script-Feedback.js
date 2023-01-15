@@ -1,174 +1,105 @@
-function changeStar(star) {
-    let stars = star.parentElement.children;
-    for (let i = 0; i < stars.length; i++) {
-      stars[i].classList.add("hovered");
-      if (stars[i] === star) {
-        break;
-      }
-    }
-  }
-  
-  function resetStar(star) {
-    let stars = star.parentElement.children;
-    for (let i = 0; i < stars.length; i++) {
-      stars[i].classList.remove("hovered");
-    }
-  }
-  
-  function selectStar(star) {
-    let stars = star.parentElement.children;
-    for (let i = 0; i < stars.length; i++) {
-      stars[i].classList.remove("selected");
-      if (stars[i] === star) {
-        break;
-      }
-    }
-    for (let i = 0; i < stars.length; i++) {
-      stars[i].classList.add("selected");
-      if (stars[i] === star) {
-        break;
-      }
-    }
-  }
-  
 // Selects the form element and the submit button from the HTML.
-const form = document.querySelector(".feedback");
+const form = document.querySelector("form.feedback");
 const submitButton = form.querySelector("#review");
 const feedbackMessage = document.querySelector(".feedback-message");
-//Adds an event listener to the submit button that listens for a click event.
-submitButton.addEventListener("click", (event) => {
-  event.preventDefault(); //prevents the default form submission behavior.
-  const formData = {}; //creates an empty object called "formData" that will store the data from the form fields.
-
-  //selects all the input, textarea, and form-check-input elements within the form and stores them in a variable called "formElements".
-  const formElements = form.querySelectorAll("input, textarea, .form-check-input");
-  //selects the div with the id "star-rating" and all the "i" tags within it, and stores them in a variable called "stars".
-  const starRating = document.getElementById("star-rating");
-  const stars = starRating.getElementsByTagName("i");
-  // initializes a variable "selectedStars" to 0. This variable will store the number of selected stars from the "star-rating" div.
-  let selectedStars = 0;
-
-  //loops through all the "i" tags (stars) and checks if each one has the class "selected". If it does, it increments the "selectedStars" variable by 1.
+const reviewsContainer = document.querySelector(".review-items");
+let reviewsData = JSON.parse(localStorage.getItem("reviewsData")) || [];
+// selects the div with the id "star-rating" and all the "i" tags within it, and stores them in a variable called "stars".
+const starRating = document.querySelector("#star");
+const stars = starRating.querySelectorAll("i");
+// initializes a variable "selectedStars" to 0. This variable will store the number of selected stars from the "star-rating" div.
+let selectedStars = 0;
+// Function to handle hover effect on the star rating
+function changeStar(star) {
+  for (let i = 0; i < stars.length; i++) {
+    stars[i].classList.add("hovered");
+    if (stars[i] === star) {
+      break;
+    }
+  }
+}
+// Function to handle resetting the hover effect on the star rating
+function resetStar(star) {
+  for (let i = 0; i < stars.length; i++) {
+    stars[i].classList.remove("hovered");
+  }
+}
+// Function to handle selecting a star rating
+function selectStar(star) {
+  for (let i = 0; i < stars.length; i++) {
+    stars[i].classList.remove("selected");
+    if (stars[i] === star) {
+      break;
+    }
+  }
+  star.classList.add("selected");
+  selectedStars = 0;
   for (let i = 0; i < stars.length; i++) {
     if (stars[i].classList.contains("selected")) {
-      selectedStars++;
+      selectedStars = i + 1;
     }
   }
-// adds the "star-rating" key to the "formData" object and assigns it the value of "selectedStars".
-  formData["star-rating"] = selectedStars;
-  //loops through all the form elements and adds each one's name and value to the "formData" object.
-  formElements.forEach((formElement) => {
-    if (formElement.type === "radio" && formElement.checked === false) {
-      return;
-    }
-    formData[formElement.name] = formElement.value;
+  return selectedStars;
+}
+//add event listener to all stars
+for(let i = 0; i < stars.length; i++){
+  stars[i].addEventListener("mouseover", function(){changeStar(this)});
+  stars[i].addEventListener("mouseout", function(){resetStar(this)});
+  stars[i].addEventListener("click", function(){selectStar(this)});
+}
+// Function to check if the email is in correct format
+function isValidEmail(email) {
+  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
+// Handle form submission
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  // Create an object to store form data - All validations are passed, proceed to store data in local storage
+  const formData = {
+    name: form.elements.name.value,
+    email: form.elements.email.value,
+    starRating: selectedStars,
+    comments: form.elements.comments.value || '',
+  };
+  // check if the required fields are filled and email is valid
+  if(!form.elements.name.value){
+    feedbackMessage.textContent = "Please fill name - it's a required field.";
+    return;
+  } 
+  if(!form.elements.email.value || !isValidEmail(form.elements.email.value)){
+    feedbackMessage.textContent = "Please fill a valid email - it's a required field.";
+    return;
+  }
+  if(selectedStars === 0){
+    feedbackMessage.textContent = "Please select a star rating - it's a required field.";
+    return;
+  }
+  // Store the form data in local storage
+  reviewsData.push(formData);
+  localStorage.setItem("reviewsData", JSON.stringify(reviewsData));
+  // Display the form data in a table
+  const tr = document.createElement("tr");
+  tr.innerHTML = 
+  `<td>${formData.name}</td>
+  <td>${formData.email}</td>
+  <td>${formData.starRating}</td>
+  <td>${formData.comments}</td>
+  <td><button class="delete-btn">Delete</button></td>`;
+  reviewsContainer.appendChild(tr);
+  // Show thank you message and reset the form
+  
+  form.reset(); // Reset form fields
+  // reset selected stars
+  selectedStars = 0;
+  stars.forEach(star => star.classList.remove("selected"));
+  feedbackMessage.textContent = ""
+  // Add event listener to delete button
+  const deleteBtn = tr.querySelector(".delete-btn");
+  deleteBtn.addEventListener("click", function() {
+    tr.remove();
+    const index = reviewsData.indexOf(formData);
+    reviewsData.splice(index, 1);
+    localStorage.setItem("reviewsData", JSON.stringify(reviewsData));
   });
-//sets the innerHTML of the "feedbackMessage" element to "Thank you for your feedback!"
-  feedbackMessage.innerHTML = `<h5> Thank you! We Appreciate your feedback ❤️ </h5>`;
-
-// Add event listener for the delete button
-document.addEventListener("click", (event) => {
-  if (event.target.classList.contains("btn-delete")) {
-    const index = event.target.dataset.index;
-    reviewData.splice(index, 1); // remove the item from the array
-    localStorage.setItem("reviewData", JSON.stringify(reviewData)); // update the local storage
-    renderReviews(); // re-render the reviews
-  }
 });
-}) 
-  // Function to render the reviews
-  function renderReviews() {
-    const container = document.querySelector(".container-fluid");
-  
-    // Clear the existing reviews
-    container.querySelectorAll(".review-item").forEach((review) => review.remove());
-    
-    // // Create a table element for the reviews
-    // const table = document.createElement("table");
-    // table.classList.add("feedback-table");
-    
-    // // Create the table head
-    // const thead = document.createElement("thead");
-    // const headRow = document.createElement("tr");
-    // headRow.innerHTML = `<th>Name</th> <th>Email</th> <th>Found what they were looking for</th> <th>Visit Reason</th> <th>Star Rating</th> <th>Additional Comments</th> <th>Actions</th>`;
-    // thead.appendChild(headRow);
-    // table.appendChild(thead);
-    
-    // Create the table body
-    const table = document.querySelector(".feedback-table")
-    const tbody = document.querySelector(".review-items");
-
-    reviewData.forEach((review, index) => {
-      const row = document.createElement("tr");
-      row.innerHTML = `<td class="table-info">${review.name}</td>
-                      <td class="table-info">${review.email}</td>
-                      <td class="table-info">${review.design}</td>
-                      <td class="table-info">${review.visit}</td>
-                      <td class="table-info">${review["star-rating"]}</td>
-                      <td class="table-info">${review.comments}</td>
-                      <td class="table-info"><button class="btn btn-danger btn-delete" data-index="${index}">Delete</button></td>`;
-      tbody.appendChild(row);
-    });
-    table.appendChild(tbody);
-    // Append the table to the container
-    container.appendChild(table);
- }
-
-  // check if there is any review data in local storage and display it
-  const reviewData = JSON.parse(localStorage.getItem("reviewData")) || [];
-  if (reviewData.length > 0) {
-    renderReviews();
-  }
-
-
-
-
-/* this works - dont delete until table works */
-
-// const reviewData = JSON.parse(localStorage.getItem("reviewData"));
-//If there is data stored, it creates a new div element with the class "review-item" and sets its innerHTML to be a string that includes the data from the "reviewData" object stored in local storage.
-// if (reviewData) {
-  //appends the "review-item" div element to the "container-fluid" div element, displaying the user's feedback in the form of a new review. The local storage is also checked in the last block of code to see if there is any existing review data. If there is, it creates a new "review-item" div element and appends it to the "container-fluid" div element, displaying the existing review data.
-//   const reviewItem = document.createElement("div");
-//   reviewItem.classList.add("review-item");
-//   reviewItem.innerHTML = `<p>Name: ${reviewData["name"]}</p> <p>Email: ${reviewData["email"]}</p> <p>Found what they were looking for: ${reviewData["find"]}</p> <p>Visit Reason: ${reviewData["visit"]}</p> <p>Star Rating: ${reviewData["star-rating"]}</p> <p>Additional Comments: ${reviewData["comments"]}</p>`;
-//   document.querySelector(".container-fluid").appendChild(reviewItem);
-// }
-
-//creates a new div element with the class "review-item" and sets its innerHTML to be a string that includes the data from the "formData" object.
-  // const reviewItem = document.createElement("div");
-  // reviewItem.classList.add("review-item");
-  // reviewItem.innerHTML = `<p>Name: ${formData["name"]}</p> <p>Email: ${formData["email"]}</p> <p>Found what they were looking for: ${formData["find"]}</p> <p>Visit Reason: ${formData["visit"]}</p> <p>Star Rating: ${formData["star-rating"]}</p> <p>Additional Comments: ${formData["comments"]}</p>`;
-  //appends the "review-item" div to the element with the class "container-fluid"
-  // document.querySelector(".container-fluid").appendChild(reviewItem);
-  
-
-// store the review data in local storage -- stores the "formData" object in local storage as a string under the key "reviewData"
-// localStorage.setItem("reviewData", JSON.stringify(formData));
-// });
-
-// check if there is any review data in local storage and display it --checks if there is any data stored in local storage under the key "reviewData"
-// const reviewsData = JSON.parse(localStorage.getItem("reviewData"));
-//If there is data stored, it creates a new div element with the class "review-item" and sets its innerHTML to be a string that includes the data from the "reviewData" object stored in local storage.
-// if (reviewsData) {
-// const reviewItems = document.querySelector(".review-items");
-//   for (let i = 0; i < reviewsData.length; i++) {
-//     const reviewItem = document.createElement("tr");
-//     reviewItem.innerHTML = `
-//       <td>${reviewsData[i].name}</td>
-//       <td>${reviewsData[i].email}</td>
-//       <td>${reviewsData[i].find}</td>
-//       <td>${reviewsData[i].visit}</td>
-//       <td>${reviewsData[i].starRating}</td>
-//       <td>${reviewsData[i].comments}</td>
-//       <td><button class="btn-delete" data-index=${i}>Delete</button></td>
-//     `;
-//     reviewItems.appendChild(reviewItem);
-//   }
-// }
-
-// check if there is any review data in local storage and display it
-  // const reviewData = JSON.parse(localStorage.getItem("reviewData")) || [];
-  // if (reviewData.length > 0) {
-  // renderReviews();
-  // }
