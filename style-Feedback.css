@@ -3,8 +3,8 @@
 html {
     font-family: "Nunito";
     font-size: 15px;
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
-
 
 .fas.fa-star {
     color: black;
@@ -28,7 +28,7 @@ html {
 body{
     border:2px solid black;
     margin: 5px;
-    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
 
 .mt-5 {
@@ -110,9 +110,11 @@ hr{
     color: black;
     padding-right: 8.5rem!important;
     padding-left: 8.5rem!important;
+    padding-top: 0.9rem!important;
+    padding-bottom: 0.9rem!important;
     border-radius: 5px;
     cursor: pointer;
-    text-align: center;    
+    text-align: center;
 }
 
 .name-cell, .star-cell{

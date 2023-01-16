@@ -17,6 +17,7 @@ img {
 html {
   font-family: "Nunito";
   font-size: 12px;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
 
 /* Block - foodHub */
@@ -25,7 +26,7 @@ html {
   width: 100%;
   display: flex;
   padding: 48px 0;
-  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%); 
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
   background-color:rgb(26, 26, 27);
   align-items: baseline;
   justify-content: flex-end;
