@@ -143,20 +143,23 @@ hr{
     color: whitesmoke;
   }
   
-  .close:hover,
-  .close:focus {
-    color:red !important;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
 .modal {
     width: 35%;
     border-radius: 50px 50px;
 }
   
- 
 .modal-content {
     border: 1px solid #888!important;
     width: 80%; 
-  }
+}
+
+.style__quote{
+    margin-bottom: -1rem;
+    font-size: 0.9rem;
+    margin-right: 1rem;
+    margin-top: -1.3rem;
+}
+
+.button__green{
+    background: rgb(106, 204, 0);
+}

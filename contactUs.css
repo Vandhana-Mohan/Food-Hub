@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap");
+
+html{
+    font-family: Nunito;
+    font-size: 15px;
+}
+
+body{
+    margin: 5px;
+}
+
+.style__contact{
+    background: rgb(106, 204, 0);
+}
+  
+.close {
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    color: whitesmoke;
+}
+    
+.modal {
+    width: 35%;
+    border-radius: 50px 50px;
+ }
+    
+  .modal-content {
+    border: 1px solid #888!important;
+    width: 80%; 
+  }
+  
+  .style__quote{
+    margin-bottom: -1rem;
+    font-size: 0.9rem;
+    margin-right: 1rem;
+    margin-top: -1.3rem;
+  }
+  
+  .button__green{
+    background: rgb(106, 204, 0);
+  }
