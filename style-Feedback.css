@@ -79,35 +79,53 @@ hr{
 .feedback-table {
     width: 100%;
     border-collapse: collapse;
+    text-align: center;
+    border: 1px solid black;
+    font-size: 35px;
   }
   
   /* Add styles for the table headers */
   .feedback-table th {
-    /* background-color: #f2f2f2; */
-    border: 1px solid #ddd;
+    font-weight:bold;
+    border: 1px solid black;
     padding: 8px;
-    text-align: left;
+    text-align: center;
   }
   
   /* Add styles for the table cells */
   .feedback-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
+    border: 1px solid darkgreen;
+    padding: 17px;
+    font-size: 20px;
   }
-  
+
   .feedback-message{
     color:red;
     width: 100%;
     text-align: center;
-  }
+}
 
-  /* Add styles for the delete button */
-  .btn-delete {
-    background-color: #f44336;
-    color: white;
-    border: none;
-    padding: 5px 10px;
+/* Add styles for the delete button */
+.delete-button {
+    color: black;
+    padding-right: 8.5rem!important;
+    padding-left: 8.5rem!important;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
+    text-align: center;    
+}
+
+.name-cell, .star-cell{
+    width: 30%;
+    text-align: center;
+}
+
+.comment-cell{
+    width: 45%;
+    text-align: center;
+}
+
+#review,#reset-button{
+    padding-left: 20px!important;
+    padding-right: 20px!important;
+}
