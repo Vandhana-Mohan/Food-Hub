@@ -1,17 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Comfortaa:wght@500&family=Dancing+Script:wght@700&display=swap');
 
 html{
     font-family: Nunito;
-    font-size: 15px;
+    background-color: black;
+}
+
+article h3{
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
 }
 
 body{
     border:2px solid black;
     margin: 5px;
-    /* background-image: url(./assets/dining-table.avif); */
-    /* background-position: 50% 50%; */
-    border-radius: 15px;
-    background-repeat: no-repeat;
 }
 
 .style__headingabout{
@@ -56,58 +58,62 @@ body{
 
 .grid-item {
   text-align: center;
-  border:2px solid rgb(238, 8, 192);
 }
 
 .item-1 {
   grid-area: item-1;
-  border:2px solid red;
 }
 
 .item-2 {
     grid-area: item-2;
-    border: 2px solid yellow;
 }
+
 .grid-item {
     text-align: center;
-    border: 2px solid green;
     height: 212px;
     width: 655px;
 }
 
 .item-3 {
   grid-area: item-3;
-  border:2px solid orange;
-  width: 60%;
-  height: 60%;
 }
 
 .item-4 {
   grid-area: item-4;
-  border:2px solid rgb(34, 1, 244);
 }
 
 .item-5 {
   grid-area: item-5;
-  border:2px solid rgb(239, 11, 42);
 }
 
 .grid-item.item-3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column-reverse;
-  flex-wrap: wrap;
-  align-content: space-around;
+  width: 200px;
+  height: 200px;
 }
 
-.grid-item.item-3 img{
+.grid-item.item-3 img {
+  object-fit: contain;
+  animation: scaleIn 2s ease-out forwards;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* .grid-item.item-3 img{
   border-radius: 15px;
   object-fit: cover;
   animation: scaleIn 2s ease-out forwards;
+  position: absolute;
+  top: 88px;
+  left: 590px; */
+  /* bottom: 700px; */
   /* moveIn 2s ease-out forwards; */
   /* rotate 3s ease-in-out; */
-}
+/* } */
 
 article {
   line-height: 1.5rem;
@@ -118,18 +124,22 @@ article h3, h4{
   text-align: center;
 }
 
-.style__p{
-  color:rgb(6, 6, 6);
+.style__p {
+  color: rgb(5, 5, 5);
   text-align: justify;
-  margin: 10px;
-  margin-right: 300px;
+  margin: 24px;
+  margin-right: 37px;
+  font-family: 'Comfortaa', cursive;
+  font-size: 16px;
+  letter-spacing: -.03em;
+  text-transform: none;
+  opacity: 1;
 }
 
-article h3{
-  font-family: cursive;
-}
 article h4{
   color: yellowgreen;
+  font-family: 'Bungee Spice', cursive;
+  font-size: 20px;
 }
 
 .style__aboutquote{
@@ -138,10 +148,11 @@ article h4{
   margin-right: 3rem!important;
 }
 
+
+/* 
 .style__contact{
   background: rgb(106, 204, 0);
 }
-
 .close {
   font-size: 18px;
   font-weight: bold;
@@ -170,4 +181,4 @@ article h4{
 
 .button__green{
   background: rgb(106, 204, 0);
-}
+} */
