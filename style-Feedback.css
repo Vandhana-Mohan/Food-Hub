@@ -81,7 +81,7 @@ hr{
     border-collapse: collapse;
     text-align: center;
     border: 1px solid black;
-    font-size: 35px;
+    font-size: 18px;
   }
   
   /* Add styles for the table headers */
@@ -96,7 +96,7 @@ hr{
   .feedback-table td {
     border: 1px solid darkgreen;
     padding: 17px;
-    font-size: 20px;
+    font-size: 14px;
   }
 
   .feedback-message{
@@ -129,3 +129,34 @@ hr{
     padding-left: 20px!important;
     padding-right: 20px!important;
 }
+
+.style__contact{
+    background: rgb(106, 204, 0);
+}
+
+.close {
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    color: whitesmoke;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color:red !important;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+.modal {
+    width: 35%;
+    border-radius: 50px 50px;
+}
+  
+ 
+.modal-content {
+    border: 1px solid #888!important;
+    width: 80%; 
+  }

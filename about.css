@@ -57,3 +57,43 @@ body{
     font-size: 1.00rem !important;
     
   }
+
+  /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  width: 33%;
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  border-radius: 75px 75px;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: black;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: -11px;
+  right: 3px
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.style__heading{
+  padding: -0.428571rem 1rem;
+  background: rgb(106, 204, 0);
+}
