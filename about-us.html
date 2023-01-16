@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./style-Contact.css">
     <title>Recipe Hunt</title>
     <script src="./script-About.js" defer></script>
+    <script src="./script-Contact.js" defer></script>
 </head>
 <body>
     <div class="container-fluid">
@@ -55,23 +56,24 @@
             </div>
             <h6 class="blockquote style__quote text-end">A recipe has no soul. - Thomas Keller</h6>
             <div class="modal-body">
-                <form>
+                <form id = "modal__form">
                 <div class="mb-3">
                     <label for="recipient-name" class="col-form-label">Name</label>
-                    <input type="text" class="form-control" id="recipient-name" required autofocus>
+                    <input type="text" class="form-control style__border" id="recipient-name" required autofocus>
                 </div>
                 <div class="mb-3">
                     <label for="recipient-email" class="col-form-label">Email Address</label>
-                    <input type="email" class="form-control" id="recipient-email" required autofocus>
+                    <input type="email" class="form-control style__border" id="recipient-email" required autofocus>
                 </div>
                 <div class="mb-3">
                     <label for="message-text" class="col-form-label">Message</label>
-                    <textarea class="form-control" rows = "3" id="message-text"></textarea>
+                    <textarea class="form-control style__border" rows = "3" id="message-text"></textarea>
                 </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn button__green">Send message</button>
+                <h6 id="message-response"> </h6>
+                <button type="submit" class="btn button__green" id = "send-button">Send message</button>
                 <button type="button" class="btn button__green" data-bs-dismiss="modal">Close</button>
             </div>
             </div>

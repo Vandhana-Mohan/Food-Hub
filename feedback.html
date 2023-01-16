@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./style-Footer.css">
     <link rel="stylesheet" href="./style-Contact.css">
     <script src="./script-Feedback.js" defer></script>
+    <script src="./script-Contact.js" defer></script>
 </head>
 <body>
     <div class="container-fluid">
@@ -107,8 +108,8 @@
         <div><h5 class="feedback-message"> </h5> </div>
         <div class="row">
             <div class="col-12 text-center mt-4">
-                <button type="submit" id = "review" class="btn btn-primary align__label p-2 mt-1">Submit</button>
-                <button type="reset" id = "reset-button"class="btn btn-primary align__label p-2 mt-1">Reset</button>
+                <button type="submit" id = "review" class="style__feedbackbuttons btn btn-primary align__label p-2 mt-1">Submit</button>
+                <button type="reset" id = "reset-button"class="style__feedbackbuttons btn btn-primary align__label p-2 mt-1">Reset</button>
             </div>
         </div>
         </form>
@@ -129,7 +130,7 @@
         </tbody>
     </table>
 </div>
-<!-- Modal for Contact Us -->
+    <!-- Modal for Contact Us -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -139,7 +140,7 @@
             </div>
             <h6 class="blockquote style__quote text-end">A recipe has no soul. - Thomas Keller</h6>
             <div class="modal-body">
-                <form>
+                <form id = "modal__form">
                 <div class="mb-3">
                     <label for="recipient-name" class="col-form-label">Name</label>
                     <input type="text" class="form-control style__border" id="recipient-name" required autofocus>
@@ -155,13 +156,13 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn button__green">Send message</button>
+                <h6 id="message-response"> </h6>
+                <button type="submit" class="btn button__green" id = "send-button">Send message</button>
                 <button type="button" class="btn button__green" data-bs-dismiss="modal">Close</button>
             </div>
             </div>
         </div>
     </div>
-
     <footer class="foodHub__footer" role="contentinfo">
         <nav class="foodHub__footer__nav">
             <ul class="foodHub__footer__nav__list">
