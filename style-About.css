@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap");
+
+html{
+    font-family: Nunito;
+    font-size: 15px;
+}
+
+body{
+    border:2px solid black;
+    margin: 5px;
+    /* background-image: url(./assets/dining-table.avif); */
+    /* background-position: 50% 50%; */
+    border-radius: 15px;
+    background-repeat: no-repeat;
+}
+
+.style__headingabout{
+  border-bottom: 5px solid rgb(217, 53, 3);
+  padding-bottom: 15px;
+}
+
+article {
+  line-height: 1.5rem;
+}
+
+@keyframes rotate{
+  0% {
+    transform: rotate(0);
+  }
+  25%{
+    transform: rotate(90deg);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  75%{
+    transform: rotate(270deg);
+  }
+  100% { 
+    transform: rotate(360deg);
+  }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+    grid-template-areas:
+      "item-1 item-2"
+      "item-3 item-3"
+      "item-4 item-5";
+    grid-gap: 10px;
+}
+
+.grid-item {
+  text-align: center;
+  border:2px solid green;
+  /* height: 200px; */
+}
+
+.item-1 {
+  grid-area: item-1;
+  border:2px solid red;
+}
+
+.item-2 {
+  grid-area: item-2;
+  border:2px solid yellow;
+}
+
+
+.item-3 {
+  grid-area: item-3;
+  border:2px solid orange;
+}
+
+.item-4 {
+  grid-area: item-4;
+  border:2px solid rgb(34, 1, 244);
+}
+
+.item-5 {
+  grid-area: item-5;
+  border:2px solid rgb(239, 11, 42);
+}
+
+.grid-item.item-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 300px;
+  height: 300px; */
+}
+
+.grid-item.item-3 img{
+  border-radius: 15px;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 100%;
+  animation: rotate 3s ease-in-out;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+article h3, h4{
+  color:rgb(6, 6, 6);
+  text-align: center;
+}
+
+.style__p{
+  color:rgb(6, 6, 6);
+  text-align: justify;
+  margin: 10px;
+}
+
+article h3{
+  font-family: cursive;
+}
+article h4{
+  color: yellowgreen;
+}
+
+.style__aboutquote{
+  font-size: 1.00rem !important;
+  margin-top: 0rem!important;
+  margin-right: 3rem!important;
+}
+
+.style__contact{
+  background: rgb(106, 204, 0);
+}
+
+.close {
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  color: whitesmoke;
+}
+  
+.modal {
+  width: 35%;
+  border-radius: 50px 50px;
+}
+  
+.modal-content {
+  border: 1px solid #888!important;
+  width: 80%; 
+}
+
+.style__contactquote{
+  margin-bottom: -1rem;
+  font-size: 0.9rem;
+  margin-right: 1rem;
+  margin-top: -1.3rem;
+}
+
+.button__green{
+  background: rgb(106, 204, 0);
+}
