@@ -19,43 +19,44 @@ body{
   padding-bottom: 15px;
 }
 
-article {
-  line-height: 1.5rem;
-}
-
-@keyframes rotate{
+@keyframes moveIn {
   0% {
-    transform: rotate(0);
+    transform: translateX(-100%);
+    opacity: 0;
   }
-  25%{
-    transform: rotate(90deg);
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
-  50%{
-    transform: rotate(180deg);
+}
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.8) skew(10deg);
+    opacity: 0;
   }
-  75%{
-    transform: rotate(270deg);
-  }
-  100% { 
-    transform: rotate(360deg);
+  100% {
+    transform: scale(1) skew(0deg);
+    opacity: 1;
   }
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: 1fr 1fr; */
     grid-template-areas:
       "item-1 item-2"
       "item-3 item-3"
       "item-4 item-5";
     grid-gap: 10px;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: baseline;
+    justify-items: center;
 }
 
 .grid-item {
   text-align: center;
-  border:2px solid green;
-  /* height: 200px; */
+  border:2px solid rgb(238, 8, 192);
 }
 
 .item-1 {
@@ -64,14 +65,21 @@ article {
 }
 
 .item-2 {
-  grid-area: item-2;
-  border:2px solid yellow;
+    grid-area: item-2;
+    border: 2px solid yellow;
 }
-
+.grid-item {
+    text-align: center;
+    border: 2px solid green;
+    height: 212px;
+    width: 655px;
+}
 
 .item-3 {
   grid-area: item-3;
   border:2px solid orange;
+  width: 60%;
+  height: 60%;
 }
 
 .item-4 {
@@ -88,19 +96,21 @@ article {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* width: 300px;
-  height: 300px; */
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  align-content: space-around;
 }
 
 .grid-item.item-3 img{
   border-radius: 15px;
-  height: 100%;
   object-fit: cover;
-  object-position: 50% 50%;
-  width: 100%;
-  animation: rotate 3s ease-in-out;
-  max-width: 100%;
-  max-height: 100%;
+  animation: scaleIn 2s ease-out forwards;
+  /* moveIn 2s ease-out forwards; */
+  /* rotate 3s ease-in-out; */
+}
+
+article {
+  line-height: 1.5rem;
 }
 
 article h3, h4{
@@ -112,6 +122,7 @@ article h3, h4{
   color:rgb(6, 6, 6);
   text-align: justify;
   margin: 10px;
+  margin-right: 300px;
 }
 
 article h3{
