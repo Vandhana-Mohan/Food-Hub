@@ -130,36 +130,6 @@ hr{
     padding-right: 20px!important;
 }
 
-.style__contact{
-    background: rgb(106, 204, 0);
-}
-
-.close {
-    font-size: 18px;
-    font-weight: bold;
-    position: absolute;
-    top: 6px;
-    right: 6px;
-    color: whitesmoke;
-  }
-  
-.modal {
-    width: 35%;
-    border-radius: 50px 50px;
-}
-  
-.modal-content {
-    border: 1px solid #888!important;
-    width: 80%; 
-}
-
-.style__quote{
-    margin-bottom: -1rem;
-    font-size: 0.9rem;
-    margin-right: 1rem;
-    margin-top: -1.3rem;
-}
-
-.button__green{
-    background: rgb(106, 204, 0);
+.style__border{
+    border: var(--bs-border-width) solid var(--bs-border-color);
 }
