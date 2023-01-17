@@ -126,6 +126,7 @@ body{
   display: grid;
   grid-gap: 25px;
   grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+  text-align: center;
 }
 
 /* Element - search-result-item */
@@ -198,6 +199,10 @@ body{
 
 .hidden {
   display: none;
+}
+
+.pagination{
+  width: fit-content;
 }
 
 @media (max-width: 768px) {

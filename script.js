@@ -4,22 +4,36 @@ const container = document.querySelector(".foodHub__container");
 const recipeContainer = document.querySelector(".foodHub__videos")
 const pagination = document.querySelector('ul');
 const heading = document.querySelector(".foodHub__recommendation")
-
+let currentPage = 1;
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.previous');
 let searchQuery = "";
 const APP_ID = "4486cb7f";
 const APP_key = "07ca8aa9c321a1980cc6b75d4326acb8";
 
+
+nextBtn.addEventListener('click', () => {
+  currentPage++;
+  fetchAPI(currentPage);
+});
+
+prevBtn.addEventListener('click', () => {
+  currentPage--;
+  fetchAPI(currentPage);
+});
+// currentPage = 1;
 searchForm.addEventListener("submit", (event) => {
   event.preventDefault();
   searchQuery = event.target.querySelector("input").value;
-  fetchAPI();
+  currentPage = 1;
+  fetchAPI(currentPage);
   // Hide the recommended heading and images
   heading.classList.add("hidden");
   recipeContainer.classList.add("hidden");
 });
 
-async function fetchAPI() {
-  const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_key}&from=0&to=100`;
+async function fetchAPI(currentPage) {
+  const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_key}&from=${(currentPage-1)*10}&to=${currentPage*10}`;
   const response = await fetch(baseURL);
   const data = await response.json();
   generateHTML(data.hits);
