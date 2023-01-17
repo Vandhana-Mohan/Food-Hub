@@ -2,6 +2,9 @@ const searchForm = document.querySelector(".foodHub__search__form");
 const searchResultDiv = document.querySelector(".foodHub__search__result");
 const container = document.querySelector(".foodHub__container");
 const recipeContainer = document.querySelector(".foodHub__videos")
+const pagination = document.querySelector('ul');
+const heading = document.querySelector("foodHub__recommendation")
+
 
 let searchQuery = "";
 const APP_ID = "4486cb7f";
@@ -14,7 +17,7 @@ searchForm.addEventListener("submit", (event) => {
 });
 
 async function fetchAPI() {
-  const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_key}&from=0&to=20`;
+  const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_key}&from=0&to=1000`;
   const response = await fetch(baseURL);
   const data = await response.json();
   generateHTML(data.hits);
@@ -23,6 +26,9 @@ async function fetchAPI() {
 
 function generateHTML(results) {
   container.classList.remove("foodHub__initial");
+  pagination.classList.remove("hidden")
+  heading.classList.toggle("hidden")
+  recipeContainer.classList.toggle("hidden")
   let generatedHTML = "";
   results.map((result) => {
     generatedHTML += 
@@ -63,13 +69,14 @@ function fetchInitialRecipes() {
 }
 
 function generateRandomIngredient() {
-  const ingredients = ['chicken', 'potato', 'beef', 'pork', 'tomato', 'spinach', 'carrot', 'onion','dessert','cookie','pie', 'egg'];
+  const ingredients = ['chicken', 'potato', 'beef', 'pork', 'tomato', 'spinach', 'carrot', 'onion','dessert','cookie','pie', 'egg','cheese','donut'];
   const randomIndex = Math.floor(Math.random() * ingredients.length);
   return ingredients[randomIndex];
 }
 
 function generateRecipes(data) {
   let generatedRecipes = "";
+  
   data.results.map((recipe) => {
     generatedRecipes += 
       `<div class="foodHub__search__result__item">
