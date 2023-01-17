@@ -17,14 +17,14 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 text-center mt-5">
+            <div class="col-12 text-center mt-3">
                 <h1 class="text-primary">Feedback Form</h1>
                 <blockquote class="blockquote mb-0 p-0 mt-3 text-end">
                     <em style="font-style: italic;">People who love to eat are always the best people. <cite>- Julia Child</cite> </em>
                 </blockquote>
             </div>
         </div> 
-        <hr>
+        <hr class = "style__headingabout">
         <label class = "align__label">Required fields are marked by a &nbsp; *.</label>
         <form class = "feedback">
             <div class="row mt-5">
@@ -93,7 +93,7 @@
                 </div>
         </div>
         <div id="star" class = "star-rating mb-3" required>
-            <label class="fs-5 align__label style__star"> Overall Satisfaction Rating: *</label>
+            <label class="fs-5 align__label style__star">*  Overall Satisfaction Rating:</label>
             <i class="fas fa-star" onmouseover="changeStar(this)" onmouseout="resetStar(this)" onclick="selectStar(this)"></i>
             <i class="fas fa-star" onmouseover="changeStar(this)" onmouseout="resetStar(this)" onclick="selectStar(this)"></i>
             <i class="fas fa-star" onmouseover="changeStar(this)" onmouseout="resetStar(this)" onclick="selectStar(this)"></i>
@@ -113,7 +113,6 @@
             </div>
         </div>
         </form>
-    <!-- Add a heading for the review section -->
     <h1>Other Reviews</h1>
     <!-- Create a table to display the review data -->
     <table class="table-danger table feedback-table">
