@@ -1,23 +1,31 @@
 # Foodie-Hub
      > Food is symbolic of Love when words are inadequate - Alan D. Wolfelt
 
-This hub is the destination to all your recipe search and cooking needs
+Foodie-Hub is an online platform that simplifies recipe searching and cooking with its user-friendly interface, vast collection of recipes, and ability to search by ingredient or cuisine.
 
-Comfort food is the best and when you cook with love its delicious. 
-Does this ever come across your mind, I loved the fried rice in that restaurant..., 
-I wish could have my mom soup now *Foodie Hub* solves all your recipe issues
+Comfort food is the best, and when you cook with love, it's delicious. Have you ever had the thought, 'I loved the fried rice at that restaurant...I wish I could have my mom's soup now'? Foodie-Hub solves all of your recipe-related issues.
 
 # Project Overview
-This website allows to search recipe with any ingredient or cuisine.
+Foodie-Hub offers a vast collection of recipes from different cuisines and ingredients. It allows users to search for recipes using any ingredient or cuisine they desire, making cooking and meal planning easy and convenient. With its user-friendly interface and advanced search options, Foodie-Hub provides a seamless experience for users looking to discover new recipes and elevate their cooking skills. Additionally, it also offers features like user reviews, feedback and contact us.
 
 # Skills
-HTML, Css, Bootstrap 5, JavaScript
+Skills:
+
+- HTML: Used to create the structure and layout of web pages.
+- CSS: Used to style and format web pages.
+- Bootstrap 5: A front-end framework that provides pre-designed elements and layout options.
+- JavaScript: A programming language that allows you to add interactivity and dynamic behavior to web pages.
+- Git: A version control system that allows you to track changes to your code and collaborate with others.
+- Local storage: A web technology that allows you to store data on the user's browser so it persists even if the user closes the browser or navigates away from the website.
+- Multiple API integration: Incorporating data from remote sources using APIs (Application Programming Interface)
 
 # Design
-Utmost care has been taken to keep design easy and flexible.
+* Utmost care taken to keep the design easy and flexible: The design of the website is user-friendly and easy to navigate, which makes it easy to search for recipes and use the website's features.
+* Responsive design: The website is designed to be accessible on different devices and screen sizes.
+* Color palette, typography, and layout: A consistent color palette, typography, and layout have been used throughout the website to make it visually appealing and easy to read.
+* Feedback form data saving: The feedback form data is saved in the user's browser using local storage, so the form data will persist even if the user closes the browser or navigates away from the website.
 
 #### Visit my website, find your recipe from a huge collection, _cook, eat and enjoy!!!_
-
 
 ---
 #### Home Page
@@ -67,14 +75,20 @@ This will install the libraries needed to run the tests.
 
 # Version 2 Updates
 
-Version 2 will have additional features so you can learn more about nutrition and calorie before searching for recipe.
+- Additional features for nutrition and calorie information: Users will be able to learn more about the nutritional content and calorie information of recipes before searching for them.
+- Use of multiple APIs: The website will be able to fetch data from multiple APIs to provide more comprehensive information to users.
+- Multiple search features: The website will have additional search options and filters to make it even easier for users to find the recipes they're looking for.
+- More Bootstrap: The website will make use of more features and functionalities provided by Bootstrap 5 to improve the user experience.
+- Dark mode settings: Users will be able to toggle between a light and dark mode to customize the website's appearance.
+- Background color palette: Users will be able to choose from a range of background color options to personalize the website's appearance.
+- More updates: There may be more updates and new features added in the future.
 
 # Future Project Updates
 
 Currently working on
 
-    *Weather App Project
-    *Personalized Art App where you can display your art work and video links
-    *Nutrition App Project
-    *Build a game
+    * Weather App Project
+    * Personalized Art App where you can display your art work and video links
+    * Nutrition App Project
+    * Build a game
 
