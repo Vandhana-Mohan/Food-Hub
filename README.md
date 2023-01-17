@@ -10,6 +10,9 @@ I wish could have my mom soup now *Foodie Hub* solves all your recipe issues
 # Project Overview
 This website allows to search recipe with any ingredient or cuisine.
 
+# Skills
+HTML, Css, Bootstrap 5, JavaScript
+
 # Design
 Utmost care has been taken to keep design easy and flexible.
 
