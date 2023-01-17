@@ -57,11 +57,21 @@ body{
 .foodHub__brand {
   text-align: center;
   font-size: 3rem;
-  color: whitesmoke;
+  color: chocolate;
   margin-bottom: 20px;
   font-family: cursive;
   letter-spacing: 1px;
   line-height: 1px;
+}
+
+.foodHub__recommendation{
+  text-align: left;
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  font-family: cursive;
+  letter-spacing: 1px;
+  line-height: 1px;
+  color:chocolate;
 }
 
 /* Element - search-form */
@@ -110,7 +120,7 @@ body{
 }
 
 /* Element - search-result */
-.foodHub__search__result {
+.foodHub__search__result,.foodHub__videos {
   margin-top: 50px;
   width: 100%;
   display: grid;
@@ -174,7 +184,7 @@ body{
 }
 
 .foodHub__container.foodHub__initial .foodHub__brand{
-  font-size: 5rem;
+  font-size: 3rem;
 }
 
 .foodHub__container.foodHub__initial .foodHub__search__form {

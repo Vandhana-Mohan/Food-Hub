@@ -49,7 +49,7 @@ function fetchInitialRecipes() {
       'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
     }
   };
-  
+
   // Generate a random ingredient
   const randomIngredient = generateRandomIngredient();
 
@@ -75,7 +75,7 @@ function generateRecipes(data) {
       `<div class="foodHub__search__result__item">
           <img class="foodHub__search__result__image" src="${recipe.thumbnail_url}" alt="${recipe.thumbnail_alt_text}">
           <div class="foodHub__search__result__content">
-            <h1 class="foodHub__search__result__title">${recipe.name}</h1>
+            <h4 class="foodHub__search__result__title">${recipe.name}</h4>
           </div>
        </div>`;
   });
