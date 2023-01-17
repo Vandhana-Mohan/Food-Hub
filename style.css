@@ -7,9 +7,16 @@
   box-sizing: border-box;
 }
 
+html {
+  font-family: "Nunito";
+  font-size: 12px;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
 body{
   margin:5px;
   border:1px solid black;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
 
 .img__logo {
@@ -19,18 +26,6 @@ body{
   width: 150px;
   height: 150px;
   float: left;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-html {
-  font-family: "Nunito";
-  font-size: 12px;
-  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
 
 /* Block - foodHub */
@@ -80,7 +75,6 @@ html {
 
 /* Element - search-input */
 .foodHub__search__input {
-  width:60%;
   padding: 10px;
   border-radius: 50px;
   border: none;
@@ -89,19 +83,8 @@ html {
   display: inline-block;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-.search-input {
   position: relative;
   width: 100%;
-  padding: 10px;
-  border-radius: 50px;
-  border: none;
-  outline: none;
-  font-size: 2rem;
-  display: inline-block;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   height: 75px;
 }
 
@@ -140,7 +123,7 @@ html {
   width: 100%;
   border-radius: 8px;
   background-color: rgb(37, 37, 37);
-  padding: 15px;
+  padding: 4px;
   overflow: hidden;
 }
 
