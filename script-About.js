@@ -1,6 +1,7 @@
 const APP_ID = "4486cb7f";
 const APP_key = "07ca8aa9c321a1980cc6b75d4326acb8";
 const imgElement = document.querySelector('#image__center');
+const loadingMessage = document.querySelector('#loading-message');
 
 document.addEventListener('DOMContentLoaded', function() {
     const cuisineTypes = ["italian", "chinese", "mexican", "indian", "french", "mediterranean","asian","american"];
@@ -13,9 +14,21 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(response => response.json())
       .then(data => {
         console.log(data)
-        const randomIndex = Math.floor(Math.random() * data.hits.length);
-        const randomImage = data.hits[randomIndex].recipe.image;
-        imgElement.setAttribute("src", randomImage);
+        if (data.hits.length === 0) {
+          loadingMessage.textContent = "Loading Image...";
+        } else {
+            const randomIndex = Math.floor(Math.random() * data.hits.length);
+            const randomImage = data.hits[randomIndex].recipe.image;
+            if (!randomImage) {
+              loadingMessage.textContent = "Image not found...";
+            } else {
+              imgElement.setAttribute("src", randomImage);
+              loadingMessage.textContent = "";
+            }
+        }
     })
-      .catch(error => console.log(error));
-});
+      .catch(error => {
+        console.log(error);
+        loadingMessage.textContent = "An error occurred while loading the image.";
+    });
+})

@@ -7,6 +7,15 @@ html{
     background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
 
+.img__logo {
+  display: inline-block;
+  margin-left: -11px;
+  margin-top: -66px;
+  width: 97px;
+  height: 90px;
+  float: left;
+}
+
 article h3{
   font-family: 'Dancing Script', cursive;
   font-size: 40px;

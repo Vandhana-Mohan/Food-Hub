@@ -6,6 +6,15 @@ html {
     background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
 
+.logo{
+    display:inline-block;
+    margin-left: -123px;
+    margin-top: -52px;
+    width: 94px;
+    height: 90px;
+    float: left;
+}
+
 .style__headingabout{
     border:2px solid rgb(217, 53, 3);
     margin: 0.9rem;
