@@ -3,8 +3,7 @@ const searchResultDiv = document.querySelector(".foodHub__search__result");
 const container = document.querySelector(".foodHub__container");
 const recipeContainer = document.querySelector(".foodHub__videos")
 const pagination = document.querySelector('ul');
-const heading = document.querySelector("foodHub__recommendation")
-
+const heading = document.querySelector(".foodHub__recommendation")
 
 let searchQuery = "";
 const APP_ID = "4486cb7f";
@@ -14,10 +13,13 @@ searchForm.addEventListener("submit", (event) => {
   event.preventDefault();
   searchQuery = event.target.querySelector("input").value;
   fetchAPI();
+  // Hide the recommended heading and images
+  heading.classList.add("hidden");
+  recipeContainer.classList.add("hidden");
 });
 
 async function fetchAPI() {
-  const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_key}&from=0&to=1000`;
+  const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_key}&from=0&to=100`;
   const response = await fetch(baseURL);
   const data = await response.json();
   generateHTML(data.hits);
@@ -27,8 +29,7 @@ async function fetchAPI() {
 function generateHTML(results) {
   container.classList.remove("foodHub__initial");
   pagination.classList.remove("hidden")
-  heading.classList.toggle("hidden")
-  recipeContainer.classList.toggle("hidden")
+  searchResultDiv.classList.remove("hidden")
   let generatedHTML = "";
   results.map((result) => {
     generatedHTML += 
@@ -66,6 +67,8 @@ function fetchInitialRecipes() {
          generateRecipes(data);
       })
       .catch(error => console.error(error));
+      heading.classList.remove("hidden");
+      recipeContainer.classList.remove("hidden");
 }
 
 function generateRandomIngredient() {
@@ -92,4 +95,5 @@ function generateRecipes(data) {
 // <p class="foodHub__recipes__serving">Servings: ${recipe.servings_noun_plural}</p>
 // <p class="foodHub__recipes__time">Total Time: ${recipe.total_time_minutes} minutes</p>
 window.onload = fetchInitialRecipes();
+
 
