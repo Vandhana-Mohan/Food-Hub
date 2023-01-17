@@ -108,7 +108,7 @@ body{
   display: inline-block;
   border-radius: 50px;
   padding: 18px;
-  right: 241px;
+  right: 271px;
   top: 20%;
   transform: translateY(-50%);
 }
@@ -203,6 +203,24 @@ body{
 
 .pagination{
   margin-left: 500px !important;
+}
+
+.page-link {
+  background-color: black;
+  color: whitesmoke;
+  width: 120px;
+  padding:10px;
+  margin:10px;
+  text-align: center;
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.page-link:hover {
+  color: red;
+  background-color: black;
+  transition: color 0.3s ease-out;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
