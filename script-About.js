@@ -1,6 +1,7 @@
 const APP_ID = "4486cb7f";
 const APP_key = "07ca8aa9c321a1980cc6b75d4326acb8";
 const imgElement = document.querySelector('#image__center');
+const images = document.querySelectorAll('#image__center');
 const loadingMessage = document.querySelector('#loading-message');
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -17,13 +18,15 @@ document.addEventListener('DOMContentLoaded', function() {
         if (data.hits.length === 0) {
           loadingMessage.textContent = "Loading Image...";
         } else {
-            const randomIndex = Math.floor(Math.random() * data.hits.length);
-            const randomImage = data.hits[randomIndex].recipe.image;
-            if (!randomImage) {
-              loadingMessage.textContent = "Image not found...";
-            } else {
-              imgElement.setAttribute("src", randomImage);
-              loadingMessage.textContent = "";
+            for (let i = 0; i < images.length; i++) {
+              const randomIndex = Math.floor(Math.random() * data.hits.length);
+              const randomImage = data.hits[randomIndex].recipe.image;
+              if (!randomImage) {
+                loadingMessage.textContent = "Image not found...";
+              } else {
+                images[i].setAttribute("src", randomImage);
+                loadingMessage.textContent = "";
+              }
             }
         }
     })

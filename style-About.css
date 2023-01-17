@@ -97,12 +97,28 @@ body{
 
 .grid-item.item-3 img {
   object-fit: contain;
-  animation: scaleIn 2s ease-out forwards;
+  animation: moveIn 2s ease-in-out 0.5s forwards;
+}
+
+.image1{
+  position: absolute;
+  top: 42%;
+  left: 3%;
+  transform: translate(-3%, -42%);
+}
+
+.image2{
   position: absolute;
   top: 42%;
   left: 39%;
   transform: translate(-39%, -42%);
-  animation: moveIn 2s ease-in-out 0.5s forwards;
+}
+
+.image3{
+  position: absolute;
+  top: 42%;
+  left: 72%;
+  transform: translate(-72%, -42%);
 }
 
 article {
@@ -117,7 +133,7 @@ article h3, h4{
 .style__p {
   color: rgb(5, 5, 5);
   text-align: justify;
-  margin: 24px;
+  margin: 4px;
   margin-right: 37px;
   font-family: 'Comfortaa', cursive;
   font-size: 16px;
