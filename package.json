@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "dotenv-webpack": "^8.0.1"
   }
 }
