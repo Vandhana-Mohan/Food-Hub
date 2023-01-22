@@ -9,8 +9,8 @@ html{
 
 .img__logo {
   display: inline-block;
-  margin-left: -11px;
-  margin-top: -66px;
+  margin-left: -16px;
+  margin-top: -74px;
   width: 97px;
   height: 90px;
   float: left;
@@ -22,14 +22,8 @@ article h3{
 }
 
 body{
-    border:2px solid black;
     margin: 5px;
     background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
-}
-
-.style__headingabout{
-  border-bottom: 5px solid rgb(217, 53, 3);
-  padding-bottom: 15px;
 }
 
 @keyframes moveIn {
@@ -102,21 +96,21 @@ body{
 
 .image1{
   position: absolute;
-  top: 42%;
+  top: 38%;
   left: 3%;
   transform: translate(-3%, -42%);
 }
 
 .image2{
   position: absolute;
-  top: 42%;
+  top: 38%;
   left: 39%;
   transform: translate(-39%, -42%);
 }
 
 .image3{
   position: absolute;
-  top: 42%;
+  top: 38%;
   left: 72%;
   transform: translate(-72%, -42%);
 }
@@ -150,6 +144,52 @@ article h4{
 
 .style__aboutquote{
   font-size: 1.00rem !important;
-  margin-top: 0rem!important;
-  margin-right: 3rem!important;
+  margin-top: -1.2rem!important;
+  margin-right: -0.6rem!important;
+}
+
+/* Webkit browsers */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #747171;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: #ef7c7c;
+border-radius: 10px;
+}
+
+/* Firefox */
+scrollbar {
+  width: 12px;
+  background-color: #636161;
+}
+
+scrollbar-thumb {
+background-color: #ef7c7c;
+border-radius: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+          "item-1"
+          "item-3"
+          "item-2"
+          "item-4"
+          "item-5";
+  }
+
+  .grid-item.item-3 {
+      width: 100%;
+      height: auto;
+  }
+
+  .image1, .image2, .image3 {
+      position: relative;
+      top: auto;
+      left: auto;
+      transform: none;
+  }
 }

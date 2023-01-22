@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./style-Feedback.css">
     <link rel="stylesheet" href="./style-Footer.css">
     <link rel="stylesheet" href="./style-Contact.css">
+    <script type="text/javascript" defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="./script-Feedback.js" defer></script>
     <script src="./script-Contact.js" defer></script>
 </head>
@@ -19,13 +20,13 @@
         <div class="row">
             <div class="col-12 text-center mt-3">
                 <h1 class="text-primary">Feedback Form</h1>
-                <img src="./assets/favicon.ico" class="logo" alt="logo">
+                <a href="./index.html"><img src="./assets/favicon.ico" class="logo" alt="logo"></a>
                 <blockquote class="blockquote mb-0 p-0 mt-3 text-end">
                     <em style="font-style: italic;">People who love to eat are always the best people. <cite>- Julia Child</cite> </em>
                 </blockquote>
             </div>
-        </div> 
-        <hr class = "style__headingabout">
+        </div>
+        <main style="margin-bottom: 180px;">
         <label class = "align__label">Required fields are marked by a &nbsp; *.</label>
         <form class = "feedback">
             <div class="row mt-5">
@@ -40,7 +41,7 @@
             </div>
             <div class="row">
                 <div class="col-12 col-md-4 mb-3">
-                    <label class = "align__label">Did you find what you were looking for?</label>
+                    <label class = "align__label">Did we meet your needs?</label>
                     <div class="form-check">
                         <input class="form-check-input align__label" type="radio" name="find" id="find-yes" value="Yes">
                         <label class="form-check-label align__label" for="find-yes">Yes</label>
@@ -104,11 +105,11 @@
 
         <input type="hidden" id="rating" name="rating" value="0">
         <div class="">
-            <textarea class="form-control w-50  style__comment" id="message" name="comments" rows="4" cols="50" placeholder="Please provide comments so we can improve." required></textarea>
+            <textarea class="form-control w-50  style__comment" id="message" name="comments" rows="4" cols="50" placeholder="Please provide comments so we can improve.   *" required></textarea>
         </div>
         <div><h5 class="feedback-message"> </h5> </div>
         <div class="row">
-            <div class="col-12 text-center mt-4">
+            <div class="col-12 text-center mt-0">
                 <button type="submit" id = "review" class="style__feedbackbuttons btn btn-primary align__label p-2 mt-1">Submit</button>
                 <button type="reset" id = "reset-button"class="style__feedbackbuttons btn btn-primary align__label p-2 mt-1">Reset</button>
             </div>
@@ -129,6 +130,7 @@
             <!-- This will be populated with the review data -->
         </tbody>
     </table>
+</main>
 </div>
     <!-- Modal for Contact Us -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
