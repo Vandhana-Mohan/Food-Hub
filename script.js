@@ -1,4 +1,4 @@
-require('./config');
+// require('./config');
 
 const searchForm = document.querySelector(".foodHub__search__form");
 const searchResultDiv = document.querySelector(".foodHub__search__result");
@@ -10,11 +10,11 @@ let currentPage = 1;
 const nextBtn = document.querySelector('.next');
 const prevBtn = document.querySelector('.previous');
 let searchQuery = "";
-const apiKey = process.env.RAPIDAPI_KEY
-const host = process.env.RAPIDAPI_HOST
+// const apiKey = process.env.RAPIDAPI_KEY
+// const host = process.env.RAPIDAPI_HOST
 
-const APP_ID = process.env.APP_ID_edamam;
-const APP_key = process.env.APP_KEY_edamam;
+const APP_ID = '4486cb7f' // process.env.APP_ID_edamam;
+const APP_KEY = '07ca8aa9c321a1980cc6b75d4326acb8' //process.env.APP_key_edamam;
 
 nextBtn.addEventListener('click', () => {
   currentPage++;
@@ -70,8 +70,8 @@ function fetchInitialRecipes() {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': apiKey,
-      'X-RapidAPI-Host': host
+      'X-RapidAPI-Key': 'f5ea32695fmsha6dcac8242f9814p1dc272jsn8c0cd080f905',
+      'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
     }
   };
 
