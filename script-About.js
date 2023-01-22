@@ -2,8 +2,8 @@
 const imgElement = document.querySelector('#image__center');
 const images = document.querySelectorAll('#image__center');
 const loadingMessage = document.querySelector('#loading-message');
-const APP_ID = '4486cb7f' // process.env.APP_ID_edamam;
-const APP_KEY = '07ca8aa9c321a1980cc6b75d4326acb8' //process.env.APP_key_edamam;
+// const APP_ID = '4486cb7f' // process.env.APP_ID_edamam;
+// const APP_KEY = '07ca8aa9c321a1980cc6b75d4326acb8' //process.env.APP_key_edamam;
 
 document.addEventListener('DOMContentLoaded', function() {
   const cuisineTypes = ["italian", "chinese", "mexican", "indian", "french", "mediterranean","asian","american"];
