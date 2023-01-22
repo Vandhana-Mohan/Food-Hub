@@ -24,10 +24,10 @@ body{
 }
 
 .close:hover, .button__green:hover{
-  background-color: whitesmoke;
-  box-shadow: 2px 2px 5px black;
+  background-color: rgba(106, 204, 0, 0.8);
+  box-shadow: 2px 2px 8px 4px grey;
   cursor: pointer;
-  transition: box-shadow 1s ease-in;
+  transition: box-shadow 0.5s ease-in;
 }
 
 .modal {
