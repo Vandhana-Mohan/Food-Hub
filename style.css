@@ -15,16 +15,15 @@ html {
 
 body{
   margin:5px;
-  border:1px solid black;
   background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
 
 .img__logo {
   display: inline-block;
-  margin-left: -143px;
-  margin-top: -66px;
-  width: 150px;
-  height: 150px;
+  margin-left: -135px;
+  margin-top: -72px;
+  width: 97px;
+  height: 90px;
   float: left;
 }
 
@@ -98,6 +97,10 @@ body{
   height: 75px;
 }
 
+.input-wrapper {
+  position: relative;
+}
+
 /* Element - search-icon */
 .search-icon {
   position: absolute;
@@ -108,14 +111,37 @@ body{
   display: inline-block;
   border-radius: 50px;
   padding: 18px;
-  right: 271px;
-  top: 20%;
+  right: 10px;
+  top: 50%;
   transform: translateY(-50%);
-}
+} 
 
 .search-icon:hover {
   color: red;
-  transition: color 0.3s ease-out;
+  cursor: pointer;
+  background-color: whitesmoke;
+  box-shadow: 2px 2px 8px 4px grey;
+  transition: box-shadow 0.5s ease-in;
+}
+
+.clear-btn{
+  position: absolute;
+  font-size: 2.7rem;
+  color: black;
+  display: inline-block;
+  border:none;
+  padding: 0px;
+  background: none;
+  z-index: 1;
+  right: 90px;
+  top: 42%;
+  transform: translateY(-50%);
+  border-right: 1px solid rgb(179, 176, 176);
+  height: 120%; 
+}
+
+.clear-btn:hover{
+  color: red;
   cursor: pointer;
 }
 
@@ -244,15 +270,6 @@ scrollbar-thumb {
 background-color: #747171;
 border-radius: 10px;
 }
-
-
-/* .style__feedbackbuttons:hover{
-  color: #0057e7;
-  background-color: whitesmoke;
-  box-shadow: 2px 2px 8px 4px grey;
-  cursor: pointer;
-  transition: box-shadow 0.5s ease-in;
-} */
 
 @media (max-width: 768px) {
   .search-result {

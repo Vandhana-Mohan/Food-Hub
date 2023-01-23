@@ -12,19 +12,21 @@
     <link rel="stylesheet" href="./style-Contact.css">
     <title>Foodie Hub</title>
     <script type="text/javascript" defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    
     <script src="./script.js" defer></script>
     <script src="./script-Contact.js" defer></script>
 </head>
 <body>
-    <section class="foodHub">
+    <section class="foodHub" style="margin-bottom: 180px;">
         <div class="foodHub__container foodHub__initial">
           <h1 class="foodHub__brand">Foodie Hub</h1>
-          <img src="./assets/favicon.ico" class="img__logo" alt="logo">
+          <a href="./index.html"><img src="./assets/favicon.ico" class="img__logo" alt="logo"></a>
           <form class="foodHub__search__form">
-            <input class="foodHub__search__input" type="text" pattern= "^[A-Za-z0-9\s]+$" title="Only letters are allowed" required placeholder="Search Your Recipe...">
-            <i class="fas fa-search search-icon" alt = "search"></i>
-          </form>
+            <div class="input-wrapper">
+                <input class="foodHub__search__input" type="text" pattern= "^[A-Za-z0-9\s]+$" title="Only letters are allowed" placeholder="Search Your Recipe...">
+                <i class="fas fa-search search-icon" alt = "search"></i>
+                <input class="clear-btn" type="reset" value="X" style="display: none;">
+           </div>
+          </form>   
           <div class="foodHub__search__result"> <!-- Edamam Search results here --> </div>
           <nav aria-label="Page navigation example mx-auto">
             <ul class="pagination hidden">
