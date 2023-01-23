@@ -6,9 +6,9 @@
 Comfort food is the best, and when you cook with love, it's delicious. Have you ever had the thought, 'I loved the fried rice at that restaurant...I wish I could have my mom's soup now'? Foodie-Hub solves all of your recipe-related issues.
 
 # Watch Presentation
-[Presentation](https://us06web.zoom.us/rec/share/qkW5OGcQ7V8qlR1hq0Ok4WCJUkKeR7zhXIdulsrWNJ0pcli1H_TKuKXNdunncdFF.ITPUjyV4g-gP5Vwv)
+[Presentation](https://us06web.zoom.us/rec/share/LDWd5a7G--cVNBe4i5te83u0400-xRfH0xwe5isZzBnYmgbaXxVNokU8nZ7Fj2Db.08PpInZBd5zEzLWA)
 
-Passcode: +*0aQY#Z
+Passcode: W#V8*#TQ
 
 # Project Overview
 Foodie-Hub offers a vast collection of recipes from different cuisines and ingredients. It allows users to search for recipes using any ingredient or cuisine they desire, making cooking and meal planning easy and convenient. With its user-friendly interface and advanced search options, Foodie-Hub provides a seamless experience for users looking to discover new recipes and elevate their cooking skills. Additionally, it also offers features like user reviews, feedback and contact us.
@@ -29,6 +29,7 @@ Skills:
 * Responsive design: The website is designed to be accessible on different devices and screen sizes.
 * Color palette, typography, and layout: A consistent color palette, typography, and layout have been used throughout the website to make it visually appealing and easy to read.
 * Feedback form data saving: The feedback form data is saved in the user's browser using local storage, so the form data will persist even if the user closes the browser or navigates away from the website.
+* Contact Form message sent by the user can be received by the developer in their email inbox.
 
 #### [Click Here](https://luxury-rugelach-0106a3.netlify.app/) - Visit my website to find your recipe from a huge collection, _cook, eat and enjoy!!!_
 
@@ -50,6 +51,8 @@ Skills:
 
 #### Contact Us 
 ![Contact Us](./assets/Contact%20Us.png)
+![User Message](./assets/user-message.png)
+![Received Message](./assets/received-email.png)
 
 ---
 
