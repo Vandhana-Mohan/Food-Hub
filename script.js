@@ -69,7 +69,7 @@ async function fetchAPI(currentPage) {
     searchInput.value = "";
   }
   generateHTML(data.hits);
-} setTimeout(run, 1000);
+}
 
 function generateHTML(results) {
   container.classList.remove("foodHub__initial");
@@ -114,7 +114,7 @@ fetch(`https://tasty.p.rapidapi.com/recipes/list?q=${randomIngredient}`, options
     .catch(error => console.error(error));
     heading.classList.remove("hidden");
     recipeContainer.classList.remove("hidden");
-} setTimeout(run, 1000);
+}
 
 function generateRandomIngredient() {
   const ingredients = ['chicken', 'potato', 'beef', 'pork', 'tomato', 'spinach', 'carrot', 'onion','dessert','cookie','pie', 'egg','cheese','donut'];
