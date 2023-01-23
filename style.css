@@ -223,6 +223,37 @@ body{
   cursor: pointer;
 }
 
+/* Webkit browsers */
+::-webkit-scrollbar {
+  width: 15px;
+  background-color: #fdfbfb;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: #747171;
+border-radius: 10px;
+}
+
+/* Firefox */
+scrollbar {
+  width: 12px;
+  background-color: #747171;
+}
+
+scrollbar-thumb {
+background-color: #747171;
+border-radius: 10px;
+}
+
+
+/* .style__feedbackbuttons:hover{
+  color: #0057e7;
+  background-color: whitesmoke;
+  box-shadow: 2px 2px 8px 4px grey;
+  cursor: pointer;
+  transition: box-shadow 0.5s ease-in;
+} */
+
 @media (max-width: 768px) {
   .search-result {
     grid-gap: 10px;

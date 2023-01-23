@@ -198,13 +198,20 @@ body{
       } 
   }
 
-@media screen and (max-width: 1000px) {
-    #star {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-column-gap: 10px;
-    } 
-    .w-50 {
-      width: 80%;
+  @media only screen and (max-width: 1000px) {
+    /* styles for label and textarea */
+    .align__label {
+        text-align: left;
+        margin-left: 10px;
     }
-  } 
+    .star-rating {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+    .style__comment {
+        width: 100%;
+        margin-left: 10px;
+
+    }
+}
