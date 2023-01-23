@@ -27,10 +27,10 @@ searchInput.addEventListener("input", () => {
   }
 });
 
-clearBtn.addEventListener("click", () => {
-  searchInput.defaultValue = searchInput.value;
-  searchInput.value = "";
-});
+// clearBtn.addEventListener("click", () => {
+//   searchInput.defaultValue = searchInput.value;
+//   searchInput.value = "";
+// });
 
 nextBtn.addEventListener('click', () => {
   currentPage++;
@@ -69,7 +69,7 @@ async function fetchAPI(currentPage) {
     searchInput.value = "";
   }
   generateHTML(data.hits);
-}
+} setTimeout(run, 1000);
 
 function generateHTML(results) {
   container.classList.remove("foodHub__initial");
