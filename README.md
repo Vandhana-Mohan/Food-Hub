@@ -5,6 +5,11 @@
 
 Comfort food is the best, and when you cook with love, it's delicious. Have you ever had the thought, 'I loved the fried rice at that restaurant...I wish I could have my mom's soup now'? Foodie-Hub solves all of your recipe-related issues.
 
+# Watch Presentation
+[Presentation](https://us06web.zoom.us/rec/share/qkW5OGcQ7V8qlR1hq0Ok4WCJUkKeR7zhXIdulsrWNJ0pcli1H_TKuKXNdunncdFF.ITPUjyV4g-gP5Vwv)
+
+Passcode: +*0aQY#Z
+
 # Project Overview
 Foodie-Hub offers a vast collection of recipes from different cuisines and ingredients. It allows users to search for recipes using any ingredient or cuisine they desire, making cooking and meal planning easy and convenient. With its user-friendly interface and advanced search options, Foodie-Hub provides a seamless experience for users looking to discover new recipes and elevate their cooking skills. Additionally, it also offers features like user reviews, feedback and contact us.
 
