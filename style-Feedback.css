@@ -22,6 +22,9 @@ html {
 
 .fas.fa-star:hover {
     color: #0057e7;
+    box-shadow: 2px 2px 8px 4px grey;
+    cursor: pointer;
+    transition: box-shadow 0.5s ease-in;
 }
 
 .fas.fa-star.selected {
@@ -60,20 +63,21 @@ body{
     font-weight:bold;
 }
 
-hr{
-    margin-left: -12.5px;
-    margin-right: -12.5px;
-    border: 1px solid black;
-    opacity: 1.25;
-    margin: 0.3rem;
-}
-
 .form-check-input{
     border: 1px solid black !important;
 }
 
 .style__feedbackbuttons{
     margin-right: 1.5rem !important;
+    letter-spacing: 1px;
+}
+
+.style__feedbackbuttons:hover{
+    color: #0057e7;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 8px 4px grey;
+    cursor: pointer;
+    transition: box-shadow 0.5s ease-in;
 }
 
 .style__star{
@@ -130,6 +134,14 @@ hr{
     letter-spacing: 1px;
 }
 
+.delete-button:hover{
+    color: #0057e7;
+    
+    box-shadow: 2px 2px 8px 4px grey;
+    cursor: pointer;
+    transition: box-shadow 0.5s ease-in;
+}
+
 .name-cell, .star-cell{
     width: 30%;
     text-align: center;
@@ -148,3 +160,59 @@ hr{
 .style__border{
     border: var(--bs-border-width) solid var(--bs-border-color);
 }
+
+/* Webkit browsers */
+::-webkit-scrollbar {
+    width: 15px;
+    background-color: #fdfbfb;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+  background-color: #747171;
+  border-radius: 10px;
+  }
+  
+  /* Firefox */
+  scrollbar {
+    width: 12px;
+    background-color: #747171;
+  }
+  
+  scrollbar-thumb {
+  background-color: #747171;
+  border-radius: 10px;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .logo{
+      display:inline-block;
+      margin-left: -151px;
+      margin-top: -65px;
+      width: 94px;
+      height: 90px;
+      float: left;
+    }
+     .form-control {
+      width: 80%;
+      border: 2px solid black;
+      border-radius: 2%;
+      } 
+  }
+
+@media screen and (max-width: 1000px) {
+    /* set the container to display as a grid container */
+    #star {
+      display: grid;
+      /* adjust the number of columns */
+      grid-template-columns: 1fr;
+      /* adjust the gap between the columns */
+      grid-column-gap: 10px;
+    }
+    /* adjust the width of the textarea */
+    .w-50 {
+      width: 80%;
+    }
+  }
+  
+  
+ 

@@ -150,23 +150,23 @@ article h4{
 
 /* Webkit browsers */
 ::-webkit-scrollbar {
-  width: 10px;
-  background-color: #747171;
+  width: 15px;
+  background-color: #fdfbfb;
 }
 
 ::-webkit-scrollbar-thumb {
-background-color: #ef7c7c;
+background-color: #747171;
 border-radius: 10px;
 }
 
 /* Firefox */
 scrollbar {
   width: 12px;
-  background-color: #636161;
+  background-color: #747171;
 }
 
 scrollbar-thumb {
-background-color: #ef7c7c;
+background-color: #747171;
 border-radius: 10px;
 }
 

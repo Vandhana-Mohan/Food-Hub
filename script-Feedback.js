@@ -26,21 +26,20 @@ function resetStar(star) {
 }
 
 // Function to handle selecting a star rating
+
 function selectStar(star) {
   for (let i = 0; i < stars.length; i++) {
-    stars[i].classList.remove("selected");
     if (stars[i] === star) {
-      break;
+        stars[i].classList.add("selected");
+        selectedStars = i + 1;
     }
   }
-  star.classList.add("selected");
-  selectedStars = 0;
-  for (let i = 0; i < stars.length; i++) {
-    if (stars[i].classList.contains("selected")) {
-      selectedStars = i + 1;
-    }
+  for (let i = 0; i < selectedStars; i++) {
+    stars[i].classList.add("selected");
   }
-  return selectedStars;
+  for (let i = selectedStars; i < stars.length; i++) {
+    stars[i].classList.remove("selected");
+  }
 }
 
 // Function to reset the stars to their initial state
