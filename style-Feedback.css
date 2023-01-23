@@ -20,15 +20,15 @@ html {
     font-size: xx-large;
 }
 
+.fas.fa-star.selected {
+    color: red;
+}
+
 .fas.fa-star:hover {
     color: #0057e7;
     box-shadow: 2px 2px 8px 4px grey;
     cursor: pointer;
     transition: box-shadow 0.5s ease-in;
-}
-
-.fas.fa-star.selected {
-    color: red;
 }
 
 .form-control {
@@ -63,13 +63,13 @@ body{
     font-weight:bold;
 }
 
-.form-check-input{
-    border: 1px solid black !important;
-}
-
 .style__feedbackbuttons{
     margin-right: 1.5rem !important;
     letter-spacing: 1px;
+}
+
+.form-check-input{
+    border: 1px solid black !important;
 }
 
 .style__feedbackbuttons:hover{
@@ -81,7 +81,7 @@ body{
 }
 
 .style__star{
-    margin-left: 26.2rem;
+    margin-left: 22.2rem;
     margin-top: 0rem;
 }
 
@@ -113,12 +113,6 @@ body{
     font-size: 14px;
   }
 
-  .feedback-message{
-    color:red;
-    width: 100%;
-    text-align: center;
-}
-
 /* Add styles for the delete button */
 .delete-button {
     color: black;
@@ -134,9 +128,14 @@ body{
     letter-spacing: 1px;
 }
 
+.feedback-message{
+    color:red;
+    width: 100%;
+    text-align: center;
+}
+
 .delete-button:hover{
     color: #0057e7;
-    
     box-shadow: 2px 2px 8px 4px grey;
     cursor: pointer;
     transition: box-shadow 0.5s ease-in;
@@ -182,7 +181,7 @@ body{
   background-color: #747171;
   border-radius: 10px;
   }
-
+ 
   @media only screen and (max-width: 1200px) {
     .logo{
       display:inline-block;
@@ -200,19 +199,12 @@ body{
   }
 
 @media screen and (max-width: 1000px) {
-    /* set the container to display as a grid container */
     #star {
       display: grid;
-      /* adjust the number of columns */
       grid-template-columns: 1fr;
-      /* adjust the gap between the columns */
       grid-column-gap: 10px;
-    }
-    /* adjust the width of the textarea */
+    } 
     .w-50 {
       width: 80%;
     }
-  }
-  
-  
- 
+  } 
