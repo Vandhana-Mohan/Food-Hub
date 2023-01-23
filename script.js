@@ -61,7 +61,7 @@ searchForm.addEventListener("submit", (event) => {
 });
 
 async function fetchAPI(currentPage) {
-  const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_KEY}&from=${(currentPage-1)*10}&to=${currentPage*12}`;
+  const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_KEY}&from=${(currentPage-1)*12}&to=${currentPage*12}`;
   const response = await fetch(baseURL);
   const data = await response.json();
   console.log(data)
