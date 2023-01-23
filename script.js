@@ -88,7 +88,7 @@ function generateHTML(results) {
   });
   searchResultDiv.innerHTML = generatedHTML;
 }
-
+//<a class="foodHub__search__result__link" target="_blank" href="">More Info...</a>
 //<p class="foodHub__search__result__data">Calories: ${result.recipe.calories.toFixed(2)}</p> */}
 //<p class="foodHub__search__result__data">Diet label: ${result.recipe.dietLabels.length > 0 ? result.recipe.dietLabels : "No Data Found"}</p>
 //<p class="foodHub__search__result__data">Health labels: ${result.recipe.healthLabels}</p>

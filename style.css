@@ -176,6 +176,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
 }
 
 /* Element - search */
@@ -190,16 +191,24 @@ body{
 .foodHub__search__result__link {
   text-decoration: none;
   text-align: center;
-  width: 130px;
+  width: 152px;
   padding: 10px 0;
   background-color: #404041;
   color: whitesmoke;
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 400;
   margin-top: 20px;
   border-radius: 4px;
   align-self: flex-start;
 }
+
+.foodHub__search__result__link:hover{
+  color: red;
+  cursor: pointer;
+  background-color: whitesmoke;
+  box-shadow: 2px 2px 8px 4px grey;
+  transition: box-shadow 0.5s ease-in;
+} 
 
 .foodHub__search__result__data {
   color: whitesmoke;
@@ -292,3 +301,4 @@ border-radius: 10px;
     width: 80%;
   }
 }
+
