@@ -12,7 +12,13 @@ submit__modal.addEventListener("click", function(event){
     if(name__modal.value == "" || email__modal.value == "" || message__modal.value == ""){       
         response.textContent = "Please fill all the fields";
     } else {
-        emailjs.sendForm("service_nj48cb8", "template_vandhana", modal__form)
+        // emailjs.sendForm("service_nj48cb8", "template_vandhana", form__modal)
+        emailjs.send("service_nj48cb8","template_vandhana",{
+            from_name: name__modal.value,
+            to_name: "vandhana",
+            message: message__modal.value,
+            reply_to: email__modal.value
+            })
         .then(function(response) {
             console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
         }, function(error) {

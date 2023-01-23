@@ -1,5 +1,3 @@
-// require('./config');
-
 const searchForm = document.querySelector(".foodHub__search__form");
 const searchResultDiv = document.querySelector(".foodHub__search__result");
 const container = document.querySelector(".foodHub__container");
@@ -13,11 +11,8 @@ const clearBtn = document.querySelector(".clear-btn");
 let searchQuery = "";
 let currentPage = 1;
 
-// const apiKey = process.env.RAPIDAPI_KEY
-// const host = process.env.RAPIDAPI_HOST
-
-const APP_ID = '4486cb7f' // process.env.APP_ID_edamam;
-const APP_KEY = '07ca8aa9c321a1980cc6b75d4326acb8' //process.env.APP_key_edamam;
+const APP_ID = '4486cb7f' 
+const APP_KEY = '07ca8aa9c321a1980cc6b75d4326acb8' 
 
 searchInput.addEventListener("input", () => {
   if (searchInput.value) {
