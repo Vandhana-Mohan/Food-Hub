@@ -1,7 +1,7 @@
 # Foodie-Hub
      > Food is symbolic of Love when words are inadequate - Alan D. Wolfelt
 
-[Foodie-Hub](https://luxury-rugelach-0106a3.netlify.app/) is an online platform that simplifies recipe searching and cooking with its user-friendly interface, vast collection of recipes, and ability to search by ingredient or cuisine.
+[Foodie-Hub](https://thefoodiehub.netlify.app/) is an online platform that simplifies recipe searching and cooking with its user-friendly interface, vast collection of recipes, and ability to search by ingredient or cuisine.
 
 Comfort food is the best, and when you cook with love, it's delicious. Have you ever had the thought, 'I loved the fried rice at that restaurant...I wish I could have my mom's soup now'? Foodie-Hub solves all of your recipe-related issues.
 
@@ -31,7 +31,7 @@ Skills:
 * Feedback form data saving: The feedback form data is saved in the user's browser using local storage, so the form data will persist even if the user closes the browser or navigates away from the website.
 * Contact Form message sent by the user can be received by the developer in their email inbox.
 
-#### [Click Here](https://luxury-rugelach-0106a3.netlify.app/) - Visit my website to find your recipe from a huge collection, _cook, eat and enjoy!!!_
+#### [Click Here](https://thefoodiehub.netlify.app/) - Visit my website to find your recipe from a huge collection, _cook, eat and enjoy!!!_
 
 ---
 #### Home Page
