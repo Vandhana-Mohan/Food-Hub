@@ -99,4 +99,3 @@ Currently working on
     * Personalized Art App where you can display your art work and video links
     * Nutrition App Project
     * Build a game
-
