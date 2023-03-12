@@ -5,7 +5,7 @@ const response = document.querySelector("#message-response");
 const form__modal = document.querySelector("#modal__form");
 const submit__modal = document.querySelector("#send-button");
 
-emailjs.init('F_vkpuNCc8ID-M7eD'); // public api key
+// emailjs.init('F_vkpuNCc8ID-M7eD'); // public api key
 
 submit__modal.addEventListener("click", function(event){
     event.preventDefault();

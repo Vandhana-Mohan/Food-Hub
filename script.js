@@ -12,8 +12,8 @@ const searchIcon = document.querySelector(".fa-search");
 let searchQuery = "";
 let currentPage = 1;
 
-const APP_ID = '4486cb7f' 
-const APP_KEY = '07ca8aa9c321a1980cc6b75d4326acb8' 
+// const APP_ID = '4486cb7f' 
+// const APP_KEY = '07ca8aa9c321a1980cc6b75d4326acb8' 
 
 searchInput.addEventListener("input", () => {
   if (searchInput.value) {
